@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function ayikla(dizi,deger_sayisi,yazdirma_say_int){
+
+// maksimum sayıyı yakalama
+var max=new Array();
+max[0]=parseInt(dizi[0]);
+	for(y=0;y<=deger_sayisi-1;y++){
+		if(max[0]<parseInt(dizi[y])){
+			max[0]=parseInt(dizi[y]);
+				
+		}
+			
+	}
+document.write("maksimum değer :"+max[0]+"<br/><br/>");
+// ------------------------------------------------------------
+
+
+
+// son karakteri yazdırma
+for(z=0;z<=deger_sayisi;z++){
+	var son_rakam=dizi[z].substr(-1,1);
+	document.write(z+" \'da ki elemanın son rakamları "+son_rakam+"<br/>");
+}
+	
+// ------------------------------------------------------------		
+	
+//tekrarlı yazdırma
+
+
+// ------------------------------------------------------------
+
+
+}
+</script>
+
+</head>
+<body>
+<h1>UYGULAMA 1</h1>
+<p>kullanıcıdan alınan bilgiyi ekrana kullanıcının girdiği değer kadar yazdıracak,
+kullanıcının girdiği değerlerin içerisinde birinci değere en yakın olan değeri yazdıracak,
+kullanıcıdan alınan sayıların son basamaklarının toplamlarını yazdıracak</p>
+</body>
+
+<script type="text/javascript">
+var deger_sayisi=prompt("kaç değer gireceksiniz","");
+var yazdirma_sayisi=prompt("kaç defa ekrana yazdırılacak","");
+var yazdirma_say_int=parseInt(yazdirma_sayisi);
+var degerler=new Array();
+for(i=0;i<=deger_sayisi-1;i++){
+degerler[i]=prompt(i+1+". degeri giriniz ","");
+}
+
+ayikla(degerler,deger_sayisi,yazdirma_say_int);
+</script>
+
+
+
+
+</html>

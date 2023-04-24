@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" language="javascript">
+var adres=self.location.href.split("?");
+var dosya_yolu=(adres.length>0)?adres[1]:"";
+var browser=(navigator.appName=="NetScape")?true:false;
+function boyutayarla(){
+genislik =(browser)?window.innerWidth:document.body.clientWidth;
+yukseklik=(browser)?window.innerHeight:document.body.clientHeight;
+genislik=document.images[0].width -genislik;
+yukseklik=document.images[0].height-yukseklik;
+window.resizeBy(genislik,yukseklik);
+self.focus();
+}
+
+</script>
+</head>
+<body>
+
+<body onLoad="boyutayarla();" topmargin="0" marginheight="0" leftmargin="0" marginwidth="0">
+<center>
+
+<script type="text/javascript">
+
+document.write("<img src'"+dosya_yolu+"'border=0>");
+
+</script>
+
+</center>
+
+
+
+</body>
+</html>

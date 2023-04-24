@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+//döngülerde çakılıyor araştırılması gerek.
+function kontrol_et(x){
+var sehirler=new Array("istanbul","ankara","bursa","izmir","antalya");
+
+	for(i=0;i<=sehirler.length-1;i++){
+		if(x==sehirler[i])
+			break;
+		else{
+			document.form.girdi.value="dfg";
+			break;
+			
+			}
+		
+	}
+	
+}
+</script>
+</head>
+<body>
+<h1>UYGULAMA 7</h1>
+<p>şehir isimleri içeren bir dizi değişken oluşturarak sayfanıza bir text nesnesi ekleyiniz.Kullanıcının text nesnesine girdiği bilginin şekir dizi değişkeni içerisinde olup olmadığını kontrol eden dizi içerisinde yoksa text nesnesinin içerisini boşaltan javascript kodlarını yazınız.</p>
+<form name="form">
+<input type="text" name="girdi">
+<input type="button" value="kontrol et"onClick="kontrol_et(document.form.girdi.value)" >
+</form>
+</body>
+</html>

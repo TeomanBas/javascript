@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>TARİH - SAAT FONKSİYONLARI</h1>
+<p>tarih ve saat ile ilgili işlemlerde date nesnesi kullanılır.Bu nesne içerisinde tarih ve zamanla ilgili tüm bilgiler mevcuttur.Javascript kullanıcı taraflı çalıştığı için burada alınan tarih saat bilgisi sunucuya ait değil sayfanın ziyaret edildiği bilgisayara aittir.Bu bilgilere aşağısaki fonksiyonlar yardımıyla ulaşabiliriz.</p>
+
+<h2>tarih fonksiyonları</h2>
+<ul>
+<li>getDate : date nesnesinden sayısal gün bilsini almak için kullanılır.(1,2...)</li>
+<li>getMounth : date nesnesinden ay bilgisini almak için kullanılır.(0=ocak,1=şubat...)</li>
+<li>getFullYear : date nesnesinden tam yıl bilgisini almak için kullanılır.(2008,2009...)</li>
+<li>getDay : date nesnesinden haftanın kaçıncı günü olduğu bilgisi almak için kullanılır.(0:pazar,1=pazartesi,2=salı,...6=cumartesi)</li>
+<li>not: getMount metodu ocak ayını 0 şubat ayını 1 olarak döndürür.Bu nedenle doğru tarihi göstermek için getMonth metodunun sonucuna 1 eklenir ve kaçıncı ay olduğu bulunmuş olur</li>
+
+</ul>
+
+<h3>UYGULAMA 1</h3>
+<p>aktif tarihin gün ay ve yıl bilgilerini alarak sayfaya yazdıralım.</p>
+<pre>
+< script type="text/javascript" >
+//tarih zaman bilgisini alalım
+var tarihsaat=new Date();
+
+//tarih-zaman bilgisinden günü alalım
+document.write(tarihsaat.getDate()+".");
+//tarih zaman bilgisinden ay+1 alalım
+document.write((tarihsaat.getMonth()+1)+".");
+//tarih-zaman bilgisinden yılı alalım
+document.write(tarihsaat.getFullYear());
+< /script >
+</pre>
+<script type="text/javascript">
+//tarih zaman bilgisini alalım
+var tarihsaat=new Date();
+
+//tarih-zaman bilgisinden günü alalım
+document.write(tarihsaat.getDate()+".");
+//tarih zaman bilgisinden ay+1 alalım
+document.write((tarihsaat.getMonth()+1)+".");
+//tarih-zaman bilgisinden yılı alalım
+document.write(tarihsaat.getFullYear());
+</script>
+
+<h2>ZAMAN FONKSİYONLARI</h2>
+<ul>
+<li>getHours: date nesnesinden saat bilgisini almak için kullanılır</li>
+<li>getMinutes: date nesnesinden dakika bilgisini almak için kullanılır</li>
+<li>getSeconds:date nesnesinden saniye bilgisini almak için kullanılır.</li>
+
+</ul>
+<h3>UYGULAMA 2</h3>
+<p>aktif tarihin saat,dakika ve saniye bilgilerini alarak sayfaya yazdıralım.</p>
+<pre>
+< script type="text/javascript">
+//tarih ve zaman bilgisini alalım.
+var tarihsaat=new Date();
+//tarih-zaman bilgisinden saat alalım.
+document.write(tarihsaat.getHours(),".");
+//tarih -zaman bilgisnden dakikayı alalım
+document.write(tarihsaat.getMinutes()+1,".");
+//tarih -zaman bilgisinden saniyeyi alalım
+document.write(tarihsaat.getSeconds());
+
+< /script >
+</pre>
+<script type="text/javascript">
+//tarih ve zaman bilgisini alalım.
+var tarihsaat=new Date();
+//tarih-zaman bilgisinden saat alalım.
+document.write(tarihsaat.getHours(),".");
+//tarih -zaman bilgisnden dakikayı alalım
+document.write(tarihsaat.getMinutes()+1,".");
+//tarih -zaman bilgisinden saniyeyi alalım
+document.write(tarihsaat.getSeconds());
+
+</script>
+
+<h2>İSTENİLEN TARİH VE ZAMANI HAZIRLAMA FONKSİYONLARI</h2>
+<ul>
+<li>setDate : Date nesnesine istenilen günü atar.</li>
+<li>setHour : Date nesnesine istenilen zamanı atar.</li>
+<li>setFullYear : Date nesnesine istenilen yılı ayarlar.</li>
+<li>setMonth : Date nesnesine istenilen ayı ayarlar.</li>
+<li>setHours : Date nesneisne istenilen saati ayarlar.</li>
+<li>setMinutes : Date nesnesine isteilen dakikayı ayarlar.</li>
+<li>setSeconds : Date nesnesine istneilen saniyeyi ayarlar</li>
+
+</ul>
+<h3>UYGULAMA 3</h3>
+<pre>
+< script type="text/javascript">
+var tarihsaat= new Date();
+tarihsaat.setFullYear("1990");
+document.write(tarihsaat);
+ < /script >
+</pre>
+
+<script type="text/javascript">
+var tarihsaat= new Date();
+tarihsaat.setFullYear(2050);
+document.write(tarihsaat);
+ </script>
+
+<h2>UTC ZAMANI</h2>
+<p>utc ilgiltere greenwich ' ten geçen meridyen referans kabul edilerek hesaplanan zaman bilgisidir.Türkiye Moskova Zaman Dilimindedir.bu yüzden türkiye saati UTC+2
+yani UTC 'den iki saat ileridedir Fakat saatlerin bir  saat ileri alınmasıyla Türkiye saati UTC+3 yani UTC'den üç saat ileridedir.Dünya zaman standrdı taradından hazırlanmış Universal coodinated Time değerlerinin saat bilgisini almak için getUTChours dakika bilgisini almak için getUTCMinutes,saniye bilgisini almak için getUTCSeconds fonksiyonlarını kullanır.</p>
+<h3>UYGULAMA 4</h3>
+<p>utc zamanını sayfaya yazdıralım.</p>
+<pre>
+< script type="text/javascript" >
+var tarihsaat=new Date();
+document.write(tarihsaat.getUTCHours(),".");
+document.write(tarihsaat.getUTCMinutes(),".");
+document.write(tarihsaat.getUTCSeconds());
+< /script > 
+</pre>
+<script type="text/javascript">
+var tarihsaat=new Date();
+document.write(tarihsaat.getUTCHours(),".");
+document.write(tarihsaat.getUTCMinutes(),".");
+document.write(tarihsaat.getUTCSeconds());
+</script>
+
+<h3>UYGULAMA 5</h3>
+<pre>
+< script type="text/javascript" >
+var tarihsaat=new Date();
+var gun_adi=new Array("pazar",
+			"pazartesi",
+			"salı",
+			"çarşamba",
+			"perşembe",
+			"cuma",
+			"cumartesi",);
+						
+var ay_adi=new Array("ocak",
+			"şubat",
+			"mart",
+			"nisan",
+			"mayıs",
+			"haziran",
+			"temmuz",
+			"ağustos",
+			"eylül",
+			"ekim",
+			"kasım",
+			"aralık");
+var gun=tarihsaat.getDate();
+var ay=tarihsaat.getMonth();
+var yil=tarihsaat.getFullYear();
+var hafta_gunu=tarihsaat.getDay();
+				
+document.write(gun+" ");
+document.write(ay_adi[ay]+" ");
+document.write(yil+" ");
+document.write(gun_adi[hafta_gunu]);
+					
+						
+< /script >
+</pre>
+<script type="text/javascript">
+var tarihsaat=new Date();
+var gun_adi=new Array("pazar",
+						"pazartesi",
+						"salı",
+						"çarşamba",
+						"perşembe",
+						"cuma",
+						"cumartesi",);
+						
+var ay_adi=new Array("ocak",
+					"şubat",
+					"mart",
+					"nisan",
+					"mayıs",
+					"haziran",
+					"temmuz",
+					"ağustos",
+					"eylül",
+					"ekim",
+					"kasım",
+					"aralık");
+var gun=tarihsaat.getDate();
+var ay=tarihsaat.getMonth();
+var yil=tarihsaat.getFullYear();
+var hafta_gunu=tarihsaat.getDay();
+				
+document.write(gun+" ");
+document.write(ay_adi[ay]+" ");
+document.write(yil+" ");
+document.write(gun_adi[hafta_gunu]);
+					
+						
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

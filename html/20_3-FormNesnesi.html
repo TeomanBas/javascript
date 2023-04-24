@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function yolla(){
+var sehir_sayisi=document.form.sehir.length;
+var secim=new Array();
+
+// bu kısım geliştirilmesi lazım ama radio butonda tek bir tane true olacağı için orda çalışır.burada ilk true gelenleri yazdırıyor gerisin görmüyor
+for(i=0;i<=sehir_sayisi-1;i++){
+	if(document.form.sehir[i].checked==true){
+		secim[i]=document.form.sehir[i].value;
+		
+		
+	}else
+		continue;
+}
+
+
+alert("seçenek sayisi : "+sehir_sayisi+"-----"+"seçilen sehir : "+secim);
+
+}
+
+</script>
+
+</head>
+<body>
+<h1>UYGULAMA 3</h1>
+<p>formlarda seçim işlemi için kullanılan checbox ve radio düğmeleri gibi nesnelerin value değerleri sabittir.
+Bu nedenle bu elemanların seçil olup olmadığına bakılması gerekir.
+nesnelerin seçim durumları bir index içerisinde tutulmaktadır.
+İşaretli nesneler true işaretsiz nesneler false değerini alır.
+Bu nesneler verilen isimler sayesinde form içerisindeki sayısını tespit edebiliriz.
+Bunun için length özelliği kullanılır.Bu tür nesnelerin o anki durumu checked özelliği ile tespit edilebilir</p>
+
+<b>document.formadi.length </b>form içerisindeki eleman sayısını verir.<br/>
+<b>document.formadi.radioadi.length </b>belirtilen isme sahip radio düğmelerinin kaç seçeneği olduğunu verir.<br/>
+
+<b>durum=document.formadi.nesne[0].checked </b> "0" indeksli nesne seçili ise "durum değişkenine "true" değilse "false" değerini atar.<br/>
+
+<p>1:formumuzda bulunan sehir isimli checkbox nesnesinin seçenek sayısını bulalım.<br/>
+2:sehir isimlerinden hangisinin seçili olduğunu bulalım<br/></p>
+<form name="form" >
+ANKARA<input type="checkbox" name="sehir" value="ankara"><br/>
+İSTANBUL<input type="checkbox" name="sehir" value="istanbul"><br/>
+İZMİR<input type="checkbox" name="sehir" value="izmir"><br/>
+<input type="button" name="gonder" value="gonder" onClick="yolla()">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

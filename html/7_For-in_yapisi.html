@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>FOR... İN YAPISI</h1>
+<p>for...in döngüler bir dizi değişkenin elemanları sayısınca veya nesnenin özellikleri sayısınca dönme işlemi geröekleştirir.
+for yapısında olduğu gibi başlangıç değerive sonlanma koşulu vermeye gerek yoktur.
+dizi değişken için kullanıldıysa dizinin ilk elemanından başlar son elemanına kadar devam eder.nesne olarak belirtilen dizi değişken veya tanımlanan bir nesne olabilir. nesne olarak dizi değişken kullanıldıysa değişken içerisine okunan dizi elamanın indeks değeri atanacaktır.</p>
+
+<b>kullanım şekli : </b>
+<pre>
+for (değişken in nesne){
+	gerçekleştirilecek işlemler
+}
+</pre>
+<h2>UYGULAMA 1</h2>
+<p>tanımlanan bir dizi değişkenin içeriğini sayfaya yazdıralım</p>
+<pre>
+< script type="text/javascript">
+var x;
+var iller = new Array();
+iller[0]="ankara";
+iller[1]="adana";
+iller[2]="istanbul";
+iller[3]="izmir";
+iller[4]="samsun";
+iller[5]="antalya";
+
+for(i in iller){
+	document.write("inkdeks değeri " +i+"olan il "+iller[i]);
+}
+
+< /script >
+</pre>
+<script type="text/javascript">
+var x;
+var iller = new Array();
+iller[0]="ankara";
+iller[1]="adana";
+iller[2]="istanbul";
+iller[3]="izmir";
+iller[4]="samsun";
+iller[5]="antalya";
+
+for(i in iller){
+	document.write("inkdeks değeri " +i+"olan il "+iller[i]+" <br/>");
+}
+
+</script>
+
+<h1>TRY...CATCH YAPISI</h2>
+
+<p>ziyaret edilen sayfalarda javascript kodlarıyla ilgili hatalar olduğu  zaman görev çubuğunda sarı ünlemle veya derleme hatası mesajıyla karşılaşılabilir.bu yapı birçok programlama dilinde olduğu gibi hata meydana geldiğinde kullanıcya mesaj vermek ve hatayı gizlemek için kullanılabilir.</p>
+<b>kullanım şekli :</b>
+<pre>
+try{
+oluşturulan javascript kodları
+}catch(err){
+hata oluştuğunda yapılacak işlemler
+}
+</pre>
+<h2>UYGULAMA 2</h2>
+<p>kodlarızda alert komutunu kasıtlı olarak yanlış yazarak sonucu inceleyelim</p>
+<pre></pre>
+
+<script type="text/javascript">
+var mesaj="";
+try{
+aalert("try bloğu çalışıyor");
+}
+
+catch(err){
+mesaj="hata oluştu\ncatch boloğu çalışıyor\n";
+mesaj+="HATA AÇIKALAMASI :"+err.description+"\n\n";
+mesaj+="devam etmek için tıklayınız.\n\n";
+alert(mesaj);
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

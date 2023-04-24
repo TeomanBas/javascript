@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+var tur=0;
+
+function say(){
+sayac=setTimeout("sure_yaz()",5000);
+tur++;
+}
+
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+say();
+var toplam_sure=0;
+function sure_yaz(){
+
+toplam_sure=tur*5;
+document.write(toplam_sure+"<br/>");
+say();
+}
+
+</script>
+</body>
+</html>

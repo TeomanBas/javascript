@@ -1,0 +1,16 @@
+<h1>UYGULAMA 3</h1>
+<p>HTML etiketlerine javascript ile erişme ve değerlerini değiştirmeye yönelik bir uygulama yapalım.</p>
+<p>lütfen</p>
+<p>işletmemizde</p>
+<p>karpuz yemeyiniz</p>
+<button   onClick="fonksiyon()">Renk değiştir</button>
+<script type="text/javascript">
+function fonksiyon(){
+var renk=new Array("blue","red","green");
+var x =document.getElementsByTagName("P");
+var i;
+for(i=0;i<=x.length;i++){
+	x[i].style.color=renk[i];
+}
+}
+</script>

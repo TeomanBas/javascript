@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+
+<script type="text/javascript">
+function duzenle(bilgi){
+// gelen bilgiyi boşluk karakterine göre bölerek diziye yerleştirelim
+var dizi =bilgi.split(' ');
+// dizinin her elemanını düzenleyelim.
+for(sayac=0;sayac<=dizi.length-1;sayac++){
+ilk_harf=dizi[sayac].substr(0,1);//kelimenin ilk harfini aldık.
+ilk_harf=ilk_harf.toUpperCase();//ilk harfi büyük yaptık.
+ilk_harf="<font color=red>" +ilk_harf+"</font>";//ilk harfini kırmızı yaptık
+diger=dizi[sayac].substring(1,dizi[sayac].length);//kelimenin kalanını aldık.
+diger=diger.toLowerCase();//kelimenin kalanını küçük harf yaptık.
+diger=diger="<font color=blue>"+diger+"</font>";//kalanı mavi yaptık.
+
+//yapılan düzenlemeyi tekrar dizinin içerisine koyalım.
+dizi[sayac]=ilk_harf+diger+" ";
+}
+return dizi;//düzenlenen diziyi fonksiyonun çağırdığı yere gönderdik.
+}
+</script>
+
+</head>
+<body>
+<h1>split()</h1>
+<p>bir karakter kümesini istenilen karaktere göre parçalara ayırır ve bu parçaları dizi içerisine yerleştirir</p>
+<pre>
+var a="GOP Ünv. turhal MYO";
+var dizi_deg=new Array();
+dizi_deg=a.split('');//boşluk karakterine göre parçalar.
+document.write(dizi_deg);
+
+</pre>
+<script type="text/javascript">
+var a="GOP Ünv. turhal MYO";
+var dizi_deg=new Array();
+dizi_deg=a.split(' ');//boşluk karakterine göre parçalar.hiçbir karakter kullanılmassa tüm karakterleri parçalayıp dizi içerisine atar.
+document.write(dizi_deg);
+</script>
+
+<h1>substring()</h1>
+<p>bir karakter kümseinden istenilen bir bölümün alınmasını sağlar.birinci parametre başlangıç noktasını ikinci parametre biriş noktasını ifade eder ve bu aralıktaki karakterleri alır</p>
+<pre>
+var a="Turhal MYO";
+var b=a.substring(0,6);//b değişkeni turhal değeerini alacaktır.
+
+</pre>
+
+<script type="text/javascript">
+
+var a="Turhal MYO";
+var b=a.substring(0,6);//b değişkeni turhal değeerini alacaktır.
+document.write(b);
+
+</script>
+
+<h1>substr()</h1>
+<p>bir karakter kümesinden istenilen bir bölümün alınmasını sağlar substring fonksiyonundan farkı olarak birinci parametre başlangıç noktasını ikinci parametre karakter sayısını belirtir.</p>
+<pre>
+var a="TURHAL MYO";
+var b=a.substr(3,3);
+document.write(b);//3. karakter dahil H harfi alındı
+</pre>
+
+<script type="text/javascript">
+var a="TURHAL MYO";
+var b=a.substr(3,3);
+document.write(b);
+</script>
+
+<h1>toUpperCase() ve toLowerCase()</h1>
+<p>bir karakter kümesindeki elemanları toUpperCase fonksiyonu büyük harfle,toLoverCase fonksiyonu küçük harfe çevirir.</p>
+<pre>
+< script type="text/javascript" >
+var a ="kaLEMler";
+
+var c =a.toUpperCase();
+var d =a.toLowerCase();
+document.write(c+" "+d);
+
+< /script >
+</pre>
+<script type="text/javascript">
+var a ="kaLEMler";
+
+var c =a.toUpperCase();
+var d =a.toLowerCase();
+document.write(c+" "+d);
+
+</script>
+
+<h1>UYGULAMALAR </h1>
+<p>Kullanıcıdan alınan bir bilginin tanımlanan bir fonksiyon içerisnde kelimelerinin ilk harfini büyük ve kırmızı,kelimelerin geri kalanını küçük ve mavi yaparak sayfaya yazdıralım.</p>
+<pre>
+
+</pre>
+
+<script type="text/javascript">
+
+var girilen=prompt("bir cümle giriniz.");
+document.write(duzenle(girilen));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

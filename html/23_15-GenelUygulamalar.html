@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Uygulamalar</title>
+</head>
+<body>
+    <h1>UYGULAMA 1</h1>
+    <script>
+        var a, b;/* var "varyant" değişken tanımlamak*/
+        // yorum satırıdır. sadece script kodları içerisinde çalışıyor
+        /* belli satırları içerisne alan yorum satırıdır.*/
+
+        a=10;
+        b=20;
+        c=a*b;
+        if(a<44){// < > <= => != == mantıksal operatörlerdir.
+            // a<44 koşulu bize true yada false değer döndürürüz doğru ise if bloğuna  
+            document.write("küçük")
+        }else if(a==70){
+            // doğru değilse else bloğuna girer.
+            document.write("eşit")
+        }else if(a>70){
+            document.write("büyük")
+        }
+    </script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <H1>UYGULAMA 2</H1>
+    <script>
+        
+        for(i=0;i<10;i++){
+            document.write(i);
+            document.write("<hr>");
+        }
+    </script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <H1>UYGULAMA 3</H1>
+    <script>
+        var toplam = 0;
+        for(i=100 ;i>90 ;i--){
+            document.write(i);
+            document.write("<hr>");
+            toplam += i;
+        }
+        document.write(toplam);
+    </script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <H1>UYGULAMA 4</H1>
+    <script>
+        var x=0
+        var y=0
+        function topla(x,y){
+            
+            if (x<y){
+                return x + y;
+            }else{  
+                return x - y;
+            }
+
+        }
+        document.write(topla(10,16));
+    </script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <H1>UYGULAMA 5</H1>
+        <table border="1px">
+    <script>
+        
+        //SCRİPT İÇERİSİNE YAZILAN DEĞİŞKENLER FOR,İF,FONK VB YAPILARIN İÇERİSİNDEKİ DEĞİŞKENLER  GLOBAL DEĞİŞKENLERDİR.
+        //BU YÜZDEN DEĞİŞKEN TANIMLAMALARINA DİKKAT EDİLMELİDİR. BİR FONK İÇERİSNDEKİ DEĞİŞKEN BAŞKA FONK VE DÖNGÜLERİ
+        //ETKİLEYEBİLİR!!!!!!!!!!!!!!
+        
+        var a=30;
+        function fact(a){
+            /*recursive*/
+            if (a==0)
+                return 1;
+            return a*fact(a-1); 
+            
+        }
+    
+            for (i=1;i<=a;i++){
+                document.write("<tr><td>"+i+"<td><td>"+fact(i)+"<td><tr>");
+               }
+        
+        
+        /*function fact1(a){ // literatif yöntem
+            var carpim=1
+            for (i=1;i<=a;i++)
+                carpim=carpim*i;
+            return carpim;
+        }
+        */
+        
+        
+    </script>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <H1>UYGULAMA 6</H1>
+    
+    <script>
+        document.write("<table border=1px>");
+            
+            for(m=1;m<30;m++){
+                document.write("<tr>");
+                    for(j=1;j<30;j++){
+                        document.write("<td>"+(m*j)+"</td>");
+                    }
+                document.write("</tr>");
+            }
+        document.write("</table>");
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <H1>canvas ile ekrana çizimler yaptırma Temel</H1>
+
+    <canvas id="tuval" width="600 " height="500" style="border: 1px solid">
+        BU YAZI CANVAS ÇALIŞMADIĞI ZAMANLARDA ÇIKAR YANİ TARAYICI DESTEKLEMİYOR OLABİLİR.
+    </canvas>
+    <script>
+        var tuval= document.getElementById("tuval");// getElementById ile herhangi bir id ye erişebiliyoruz
+        var cizim= tuval.getContext("2d");// tuvali 2 boyutlu çizim ortamına aldık ve cizim değişkenine atadık.
+        cizim.beginPath();//çizimle ilgili bir yol belirtebiliyoruz.mausun hareketlerini birleştiren bir çizim tablasını belirtir.
+        cizim.moveTo(0,0);// sol üst köşeden başlayan bir yer belirttik
+        cizim.lineTo(300,300);// 300,300 kodinatına kadar bir çizgi belirledik yani moveTo ve lineTo ile sanal bir mouse yi bu kordinatlara sürükledik.
+        cizim.lineTo(300,310)// x de sabit kaldı ve y ekseninde 200 daha ilerledi
+        cizim.stroke();//çizme işlemini gerçekleştirdik bunu yapmazsak çizme işlemi gerçekleşmez.
+        //moveTo çizmeden git lineTo çizerek git anlamı taşır.
+        cizim.moveTo(400,400);
+        cizim.arc(300,200,50,0,2*Math.PI);//(x kord,y kord, çap, baş derecesi,bitiş derecesi pi cinsinden)
+        cizim.stroke();
+    </script>
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+</body>
+</html>

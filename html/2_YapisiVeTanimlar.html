@@ -1,0 +1,95 @@
+ <!DOCTYPE HTML>
+ <html>
+ <head>
+ <meta charset="utf8">
+ <title> JAVA SCRİPT BAŞLANGIÇ</title>
+ <script type="text/javascript">
+	
+	function mesaj()
+	{
+	alert("sitemize hoşgeldiniz")
+	}
+ </script>
+ <script>
+	var ders="İNTERNET PROGRAMCILIĞI";
+	var olcu=300;
+</script>
+ 
+ </head>
+ <body onload="mesaj()">
+ <h1>JAVA SCRİPT YAPISI VE TANIMLAR</h1>
+ <p>web browserlar html tagları arasında <script language="JavaScript"> taglarını gördüğünde bu kısımda itibaren koları java script olarak yorumlar </script> gördüğünde ise bu yoruma son verip htl yorumuna döner.başlangıç etiketi 
+içerisine jaca scrip sürümüde yazılabilir, yazılmadığı takdirde 1.0 verisyonunun kullanıldığını varsayar ve ona göre kodları yorumlar. </p>
+ 
+ <h1>DOM (DOCUMENT OBJECT MODEL)</h1>
+ <p>
+ DOM html ve css ile programlama dilleri arasında bir standart oluşturur ve dilleri programlama deyimleri ile etkin kulanmasına yardımcı olur.Yani dom html ve css nesneler bütününe çeviren bir standarttır.dom ile java script bir web sayfasının tüm html ve css kodlarına erişir ve bunları değiştirebilir.
+ bir web sayfası yüklendiğinde dom (web sayfasını modeli) oluşturulur.java script ile html css kodlarına müdahale edilebildiği için html ve css e programlama kabiliyeti kazandırmış oluruz.
+ 
+ </p>
+ 
+ <h1>JAVASCRİPT KODLAMA STANDARTLARI</h1>
+ <ul>
+ <li>boşluklar önemsizdir</li>
+ <li>komutlar noktalı tırnak işareti ; ile bitirilir.</li>
+ <li>büyük küçük harf ayrımı vardır!!!</li>
+ <li>kodların ilk harfi sayı ile başlayamaz</li>
+ <li>türkçe karakterler kullanılamaz</li>
+ <li>javascript kodları olarak kullanılan kelimeler isim veya değişken vs olarak kullanılamaz</li>
+ <li>tek tırnak ve çift tırnak arasında bir fark yoktur, iki tırnak işareti iç içe kullanılabilir tek ayrım ve faydası budur.</li>
+ <li>yorum satırları // satır bazlı veya /* ... */ blok bazlı kullanılabilir.</li>
+ <li>yazılan kodlar bazı tarayıcılarda çalışmama ihtimali varsa <code> < !-- ... //--> </code> şeklinde kod kullanılabilir.</li>
+
+ <ul>
+ <br/>
+ <br/>
+ <br/>
+ <script language="JavaScript" type="text/javascript">
+ <!-- JS kodlarını desteklemeyen tarayıcılarda kodları gizleyelim
+	
+	document.write("<b>ilk mesaj.</b><br/>Javascript ile sayfaya yazı yazdırılabilir ve string olan kısımda html etiketleride kullanılabilir.");
+	document.write('<p style=color:red;> MERHABA DÜNYA</p>');
+	
+	//kod gizleme sonu-->
+
+ </script>
+<h1>SAYFA İÇERİSİNDE KULLANIM YERLERİ</h1>
+<p>head etiketleri içerisinde yazılan js etiketleri genellikle fonksiyon tanımlamalarında kullanılır.head etiketlerinin arasında yazılan js fonksiyonları
+sayfa içerisinde bir olay gerçekleştiğinde çalışır.herhangi bir fonksiyon olmadan yazılırsa sayfa açıldığı anda burası aktif olur js kodları çalıştırılır.
+html sayfa üzerinde bulunan nesnelere erişmek için buraya yazılan javascript kodları sorunlara yol açabilir.Sayfa yüklenirken kullanıcıdan alınmak istenen bilgi var ise burası head kısmı kullanılabilir.
+ayrıca head kısmında tanımlanan değişkenler sayfanın her yerinden erişilebilir. body içerisinde de "onload" ile fonksiyon çağırılmış olur ve body yüklendiği anda fonksiyon çalışır.</p>
+ 
+ 
+ <script type="text/javascript">
+	
+	document.write("<center><marquee width='"+olcu+"'; style='border:1px solid red';>"+ders+"</marquee><br/> EĞİTİM PORTALI</center>");
+	document.write("head kısmında tanımlanan değişkenler ve string ifadeleri arasında + operatörü ile nesnelerin yerleşimi kodlar üzeirnde görülmektedir.");
+ </script>
+ <br/>
+ <pre>
+  < script type="text/javascript" >
+	
+	document.write("< center>< marquee width='"+olcu+"'; style='border:1px solid red'; >"+ders+"< /marquee >< br/ > EĞİTİM PORTALI< /center >");
+	
+ < /script >
+ </pre>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </body>
+ 
+ 
+ <footer>
+ 
+ </footer>
+ 
+ </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" language="javascript">
+var ilk_karakter=0;
+var yazi="Deneme";
+var yazi2="Deneme2";
+var uzunluk=yazi.length;
+var buton_genislik=200;
+
+function buton_kayan_yazi(){
+document.deneme.dugme.style.width=buton_genislik;
+document.deneme.dugme.value=yazi.substring(ilk_karakter,uzunluk)+yazi.substring(0,ilk_karakter);
+ilk_karakter++;
+if(ilk_karakter>=uzunluk)
+	ilk_karakter=0;
+setTimeout("buton_kayan_yazi()",300)
+}
+
+function buton_yanip_sonen_yazi(){
+document.deneme.dugme2.style.width=buton_genislik;
+	if(document.deneme.dugme2.value==yazi2)
+		document.deneme.dugme2.value=" ";
+	else
+		document.deneme.dugme2.value=yazi2;
+setTimeout("buton_yanip_sonen_yazi()",300)
+}
+
+</script>
+</head>
+<body>
+<body onload="buton_kayan_yazi(); buton_yanip_sonen_yazi();">
+<form name="deneme">
+	<input type="button" name="dugme" value="">
+	<input type="button" name="dugme2" value="">
+</form>
+
+
+</body>
+</body>
+</html>

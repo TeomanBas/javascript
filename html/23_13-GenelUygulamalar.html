@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function cikis_ad(x){
+	var a=x;
+	document.form.ad.value=a.toUpperCase();
+}
+function cikis_soyad(y){
+	var b=y;
+	document.form.soyad.value=b.toUpperCase();
+}
+
+</script>
+
+</head>
+<body>
+<form name="form">
+
+<input type="text" name="ad" onMouseout="cikis_ad(document.form.ad.value)">
+<input type="text" name="soyad" onMouseout="cikis_soyad(document.form.soyad.value)">
+</form>
+<p id="deneme"><p>
+</body>
+</html>

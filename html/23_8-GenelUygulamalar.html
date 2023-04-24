@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+
+<script type="text/javascript">
+
+function adrese_git(adres){
+
+window.open(adres,"adres","menubar=no, toolbar=no, location=no,status=no,scrollbars=no,resizable=no,height=800,width=600");
+
+
+
+}
+
+</script>
+
+
+
+</head>
+<body>
+<h1>UYGULAMA </h1>
+<p>sayfanıza beş adet buton ekleyiniz botonlara tıklandığında yenipencere("link") fonksiyonuna istenilen adrese gönderilerek 800x600 boyutunda adres ve kaydırma çubuğu olmayan boyutları değiştirilemez bir pencerede adresin açılmasını sağlayan javascript kodlarını yazınız.</p>
+<form name="adresler">
+adres 1 <input name="adres_1">&nbsp;<input type="button" name="buton_1" value="gönder" onClick="adrese_git(document.adresler.adres_1.value)"><br/>
+adres 2 <input name="adres_2">&nbsp;<input type="button" name="buton_2" value="gönder" onClick="adrese_git(document.adresler.adres_1.value)"><br/>
+adres 3 <input name="adres_3">&nbsp;<input type="button" name="buton_3" value="gönder" onClick="adrese_git(document.adresler.adres_1.value)"><br/>
+adres 4 <input name="adres_4">&nbsp;<input type="button" name="buton_4" value="gönder" onClick="adrese_git(document.adresler.adres_1.value)"><br/>
+adres 5 <input name="adres_5">&nbsp;<input type="button" name="buton_5" value="gönder" onClick="adrese_git(document.adresler.adres_1.value)"><br/>
+</form>
+<p>input değerlerini almak için form içerisinde olmları gerekiryor ve form üzerinde erişmek gerekiyor.</p>
+</body>
+</html>

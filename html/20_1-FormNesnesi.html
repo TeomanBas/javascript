@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" >
+function uyari(){
+alert(document.mesaj.icerik.value);
+/*yada direkt elemente erişerek işlem yapılabilir
+var mesaj=document.getElementById('icerik').value;
+alert(mesaj);*/
+}
+</script>
+</head>
+<body>
+<h1>UYGULAMA 1</h1>
+<p>sayfamıza bir form text nesnesi ve buton ekleyelim ve buton'a tıklandığında text içerisine yazılan bilgiyi mesaj olarak verdirelim</p>
+<form name="mesaj">
+<input type="text"  id="icerik">
+<input type="button" name="goster" value="gonder" onClick="uyari()">
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

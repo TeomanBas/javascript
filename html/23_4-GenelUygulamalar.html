@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" language="javascript">
+
+function degistir(){
+if(document.deneme.secenek.selectedIndex!=0){
+	window.open(document.deneme.secenek[document.deneme.secenek.selectedIndex].value);
+}
+}
+
+</script>
+</head>
+<body>
+<form method="post" name="deneme">
+<select name="secenek" size="1px" onChange="degistir()">
+	<option>---Linkler---
+	<option value="https://www.google.com.tr">google
+	<option value="https://www.hotmail.com">hotmail
+	<option value="https://www.yahoo.com">yahoo
+
+</select>
+
+</form>
+</body>
+</html>

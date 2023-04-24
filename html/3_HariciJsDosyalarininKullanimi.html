@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>HARİCİ JAVASCRİPT DOSYALARININ KULLANIMI</h1>
+<p>
+birkaç sayfadan oluşan javascript dosyları head ve body etiketlerinin arasında çağırılabilir.eğer değişkenler kullanılıyorsa head etiketleirnin
+içerisinde kullanılması daha uygun olacaktır.js uzantılı oluşturulan dosyanın bir html sayfasına çağrılma şekli aşağıdaki gibidir.
+
+</p>
+
+<pre>
+< script type="text/javascript" src="dosya_yolu/harici_dosya_adi.js" >  < /script >
+</pre>
+<h2> UYGULAMA 1</h2>
+<script type="text/javascript" src="../js/mesaj.js"></script>
+
+<h1>JAVASCRİPT DEĞİŞKENLER</h1>
+<p>değişkenler program çalıştığı sürece içerisinde değer tutulan araçlardır.program çalıştığı sürece sonradan da değişebilirler.değişkenlere isim verilirken kodlama standartlarına dikkat edilmelidir.
+değişken isimleri büyük küçük harfe duyarlıdır.değişken isimleri karakterle veya _(atl çizgi) ile başlamalıdır.sayı ile başlamamalıdırlar. ve herhangi bir javascript fonksiyon yada metod ismi ile aynı olmamalıdırlar.
+değişkenler var ifadesi ile tanımlanabilir tip tanımlamalarına gerek duyulmayabilir var ifadesi değişken tipini otomatik olarak belirleyecektir.sayısal tipde tanımlanacak değişkenler 
+tırnak içerisinde tanımlanmamalıdır.bu şekilde int bir değer veya double bir değişken tanımlaması yapılabilir.</p>
+
+<h2> UYGULAMA 2</h2>
+<script type="text/javascript" src="../js/borc-bakiye-hesap.js"></script>
+
+<h1>TAMSAYI DEĞERLER(INTEGER)</h1>
+<p>tam sayılar 10 tabanlı (decimal) ,8 tabanlı(octal) , veya 16 tabanlı (hexadecimal) olabilir 8 tabanındaki sayıları belirtmek için önüne 0 ,16 tabanındaki sayıları belirtmek için önüne 0 ve x koyulur.16 tabanındaki sayıtları yazarken 9 dan sonra A,B,C,D,E VE F harfleri kullanılır. </p>
+
+<h1>KESİRLİ DEĞERLER (FLOAT)</h1>
+<p>virgüllü sayıları kapsamaktadır.sayıların ondalık kısmı ile tamsayı kısmı arasında virgül yerine nokta kullanılır.</p>
+
+<h1>MANTIKSAL DEĞERLER(BOOLEAN)</h1>
+<p>mantıksal değerler true veya false şeklindedir.javascript true değerleri 1 e false değerini 0 ile tutar.Mantıksal ifadeler küçük harfle yazılmalıdır.yapılan bir işlemin doğru olma durumu 1 yanlış olma durumu 0 olarak döner.</p>
+
+<h1>KARAKTER KÜMELERİ(STRİNG)</h1>
+<p>javascript içerisnde çift tırnak arasına veya tek tırnaka rasına yazılan değerlerin tamamı string ifadedir.strin ifade içerisinde harf olabileceği gibi rakamda olabilir.ancak buradaki rakamlar sayısal işlemlerde kullanılamaz.</p>
+
+<h1>ÖZEL KARAKTERLER</h1>
+<p>karakter kümesi içerisinde çeşitli komutlar vermek istediğinizde kullanılan karakterlerdir.Bu karakterlerin kullanıldığı bir bilgi sayfaya yazdırılacağı zaman < pre > < /pre > etiketlerinin arasına yazılması gerekecektir.aksi takdirde bu komutlar çalışmayacaklardır.
+</p>
+<table border="1px">
+<tr><td> \b </td><td>backspace tuşunun görevini yapar</td></tr>
+<tr><td> \n </td><td>imlecin yeni satıra geçmesini sağlar</td></tr>
+<tr><td> \r </td><td>enter tuşunun görevini yapar</td></tr>
+<tr><td> \t </td><td>tab tuşunun görevini yapar</td></tr>
+<tr><td> \\ </td><td>yazıya ters-bölüm işareti koydurur</td></tr>
+<tr><td> \' </td><td>yazıya tek-tırnak işareti koydurur.</td></tr>
+<tr><td> \" </td><td>yazıya çift-tırnak işareti koydurur.</td></tr>
+
+
+</table>
+
+
+<h2>UYGULAMA 3</h2>
+<pre>
+<script>
+document.write("ilk satır.\nikinci satır\n");
+document.write("üçüncü satır.\ttabdan sonrası");
+</script>
+</pre>
+
+<h1>OPERATÖRLER</h1>
+<p>programınız içerisinde kullanmış olduğunuz değişkenlere matematiksel veya mantıksal işlem yaptırabilmek için operatörler kullanılmaktadır.</p>
+<h1>ARİTMETİKSEL OPERATÖRLER</h1>
+<p>metematiksel işlemler yaptırmak için kullandığımız operatörlerdir.</p>
+<table border="1px">
+<tr><td>+</td><td>toplama</td></tr>
+<tr><td>-</td><td>çıkarma</td></tr>
+<tr><td>*</td><td>çarpma</td></tr>
+<tr><td>/</td><td>bölme</td></tr>
+<tr><td>%</td><td>bölme işleminden kalan</td></tr>
+<tr><td>++</td><td>artırma</td></tr>
+<tr><td>--</td><td>eksiltme</td></tr>
+
+</table>
+<p>++b ve b++ arasında dikkat edilmesi gereken önemli bir fark vardır.b++ kullanıldığı zaman b değişkeni üzerinde işlem yapılır ve daha sonra b değişkeni bir artırılır.aynı özellik -- içinde geçerlidir.</p>
+
+<h2>UYGULAMA 4</h2>
+<script type="text/javascript" src="../js/degerarttırma.js"> </script>
+
+<h1>ATAMA OPERATÖRLERİ</h1>
+<p>atama operatörleri bir değişkene değer atamak için kullanılır.Aşağıdaki tabloda atama operatörleri verilmiştir.bu tabloda a=8 b=4 olarak kabul edilmiştir.</p>
+<table border="1px">
+<tr><td>operatör</td><td>örnek</td><td>eş değeri</td><td>sonuç</td></tr>
+<tr><td>=</td><td>a=b</td><td></td><td>a=4</td></tr>
+<tr><td>+=</td><td>a+=b</td><td>a=a+b</td><td>a=12</td></tr>
+<tr><td>-=</td><td>a-=b</td><td>a=a-b</td><td>a=4</td></tr>
+<tr><td>*=</td><td>a*=b</td><td>a=a*b</td><td>a=32</td></tr>
+<tr><td>/=</td><td>a/=b</td><td>a=a/b</td><td>a=2</td></tr>
+<tr><td>%=</td><td>a%=b</td><td>a=a%b</td><td>a=0</td></tr>
+</table>
+
+<h1>KARŞILAŞTIRMA OPERATÖRLERİ</h1>
+<p>bu operatörler genellikle if gibi şarta bağlı işlemlerde kullanılır verilen ili değeri iki değişkeni veya deişkenlerle değerleri karşılaştırmak için kullanılır.</p>
+
+<table border="1px">
+<tr><td>operatör</td><td>görevi</td><td>açıklama</td></tr>
+<tr><td>==</td><td>eşit</td><td>eşitlik varsa true yoksa false döner</td></tr>
+<tr><td>===</td><td><denk</td><td>iki değişkenin tip ve değer olarak eşitliğini kontrol eder.eşitlik varsa true yoksa false döner</td></tr>
+<tr><td>!=</td><td>eşit değil</td><td>iki değişkenin eşit olup olmadığını kontrol eder.eşitlik varsa false yoksa true döner</td></tr>
+<tr><td>&lt</td><td>küçük</td><td>ilk değişken ikinci değişkenden küçükse true değilse false döner</td></tr>
+<tr><td>&lt=</td><td>küçük veya eşit</td><td>ilk değişken ikinci değişkene eşit veya küçükse true değilse false döner</td></tr>
+<tr><td>&gt</td><td>büyük</td><td>ilk değişken ikinci değişkenden büyükse true değilse false döner</td></tr>
+<tr><td>&gt=</td><td>büyük veya eşit</td><td>ilk değişken ikinci değişkene eşit veya büyükse true değilse false döner.</td></tr>
+
+
+</table>
+
+
+<h1>KOŞULA BAĞLI OPERATÖRLER</h1>
+<p>bu operatör iki değişken arasında karşılaştırma yapmanın en sade ve kısa yoludur. ? ve : karaterleri kullanılır
+Karşılaştırmanın sonucu bir değişkene atanarak istenildiği gibi kullanılabilir.Bu operatör yardımıyla mikrosoft excel de kullanılan iç içe eğer formüllerine benzer yapı kullanılabilir.
+<b>kulanım şekli</b><br/>
+sonuc=değişken_1[karşılaştırma operatörü] değişken_2 ? değişken_3:değişken_4
+bu koşul doğru ise değişken_3 değilse değişken_4 olarak sonuc değeri atanır.
+</p>
+
+<h2>UYGULAMA 5</h2>
+<script type="text/javascript" src="../js/kosula-bagli-op.js"></script>
+
+<h2>UYGULAMA 6</h2>
+<script type="text/javascript" src="../js/kosula-bagli-op1.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

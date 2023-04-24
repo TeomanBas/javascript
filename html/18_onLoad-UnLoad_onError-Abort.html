@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+
+function selamlama(islem){
+	if(islem=="giris"){
+		alert("Hoş Geldiniz");
+	}if(islem=="cikis"){
+		alert("Güle Güle");
+	}
+}
+
+</script>
+
+
+
+</head>
+<body onload="selamlama('giris')" onUnload="ugurla('cikis')">
+<h1>"onLoad" ve "onUnload" OLAYI</h1>
+<p>onload olayı sayfanın yüklenmeye başlaması ile onUnload olayı ise sayfadan ayrılmak istendiğinde gerçekleşen olaydır.
+Sayfa açılmaya başladığında yapılmasını istediğiniz bir işlem var ise Onload olayı kullanılır.Çoğunlukla sayfa açılırken kullanıcının tarayıcısının özelliğine göre işlem yapmak istediğinizde onload olayı kullanılmaktadır.
+onload ve onUnload olayları body etiketi içerisinde kullanılır.</p>
+
+<h2>UYGULAMA 1</h2>
+<p>ziyaretçi web sayfamızı açtığında "HOŞ GELDİNİZ " sayfadan ayrılırken "GÜLE GÜLE " mesajı verdirelim.Buradaki javascript fonksiyonları body tagına tanımlanır ve ilgili fonksiyonda 
+head tagına tanımlanır.</p>
+
+<h1>"onError", "onAbort" olayı</h1>
+<p>sayfa tam yüklenmediği durumlarda javascript kodlar tam olarak yorumlanmadığı için veya üzerinde işlem yapmak istediğni nesne tam yüklenmediği için hatalar meydana gelebilir .
+mesela bir resim üzerinde image-map kullandınız.Resim tam yüklenemediyse resim üzerindeki linklerde sorunla karşılaşabilirsinizböyle durumalrda
+onError olayını kullanarak kullanıcıya mesaj verdirebilirsiniz aynı şekilde sayfanın yüklenmesi esnasında kullanıcı tarafından sayfa yüklenmesi durduruldu ise bu durumda onAbort olayı gerçekleşmiş olur</p>
+<h2>UYGULAMA 2</h2>
+<p>sayfamızda yerleştirilen resmin bir bölgesine link verilmiştir.Ancak resm dosyası yoktur.böyle bir durumda hata oluşağı için kullanıcıyı uyaralım</p>
+
+<img src="deneme.jpg" height="350px" width="350px" onError="alert('resim yüklenirken hata oluştu lütfen internet bağlantınızı kontrol ediniz')">
+
+<h1>NESNELER VE ÖZELLİKLERİ</h1>
+<p>programlamada kullanılan her bir öğe nesne olarak kabul edilir.Nesnelerin özellileri değiştirilerek onlara farklı özellikler verilebilir.Web sayfası hazırlarken kullanılan öğeler(form,input vb.) birer nesnedir.
+dümeye tıklandığında mesaj vermesi düğme nesnesinin tıklama özelliği ile gerçekleştirilir.Bir çok yerde kullandığımız "document.write", document nesnesinin yani sayfamızın write özelliğini kullanarak sayfaya istediğimiz yazıyı yamamızı sağlar.aslında
+document nesnesi windows nesnesine yani kullanılan web tarayıcıda açık olan pencereye ait özelliktir.İşlemlerin çoğu o anki pencere içerisinde yapıldığı için ayrıca windows yazmadan document nesnesi kullanılabilir.
+</p>
+<h1>"navigator" Nesnesi</h1>
+<p>kullanılan web tarayıcısı javascript tarafından nesne olarak algılanır.Bu nesnenin özellikleri aşağıdaki gibidir.Özellikler kullanılırken <b>navigator.özellik</b> şeklinde kullanılmalıdır.Tarayıcıya öel sayfalar tasarlandığında sayfa açılmadan önce javascript kodlarının çalışıp çalışmayacağını konntrol etmek amacıyla kullanılabilir.
+</p>
+<table border="1px">
+<tr><th>NESNE ÖZELLİĞİ</th><th>AÇIKLAMA</th><tr>
+<tr>
+<td>appName</td><td>tarayıcı adını verir</td>
+</tr><tr>
+<td>appVersion</td><td>tarayıcı versiyonunu verir</td></tr><tr>
+<td>appCodeName</td><td>tarayıcının kod adını verir</td></tr><tr>
+<td>userAgent</td><td>tarayıcının kendini sunucuya'a tanıtırken kullandığı ismi verir.</td></tr>
+</table>
+
+<h2>UYGULAMA 3</h2>
+<p>sayfamızı çalıştırdğımız web tarayıcısının özelliklerini öğrenelim</p>
+<script type="text/javascript">
+
+document.write("tarayıcının adı : "+navigator.appName+"<br/>");
+document.write("tarayıcının versiyonu : "+navigator.appVersion+"<br/>");
+document.write("tarayıcının kod adı : "+navigator.appCodeName+"<br/>");
+document.write("sunucuya tanıtırken kullandığı isim : "+navigator.userAgent+"<br/>");
+
+</script>
+<h1>"screen" NESNESİ </h1>
+<p>ekran(screen) nesnesi web sayfasını ziyaret ede kullanıcının ekran çözünürlüğü ve renk derinliği gibi ekrana ait özelliklerini öğrenmek için kullanılır screen nesnesi yardımıyla almak istenilen bilgiler kullanıcının web tarayıcısının türüne göre farklılık gösterebilir bazı özellikler almak için kullanılan javascript komutları tarayıcı tarafından desteklenmiyor olabilir</p>
+<table table="text/javascript">
+<tr><th>NESNE ÖZELLİKLERİ</th><th>ÖZELLİĞİN İŞLEVİ</th></tr>
+<tr><td>screen.width</td><td>ekran çözünürlüğünün genişlik değerini verir</td></tr>
+<tr><td>screen.height</td><td>ekran çözünürlüğünün yükseklik değerini verir</td></tr>
+<tr><td>screen.colorDepth</td><td>renk derinliğini verir</td></tr>
+<tr><td>screen.availWidth</td><td>ekran çözünürlüğünün kullanılabilir geişlik değerini verir</td></tr>
+<tr><td>screen.availHeight</td><td>ekran çözünürlüğünün kullanılabilir yükseklik değerini verir.</td></tr>
+</table>
+<p>örneğin belirli bir çözünürlük değeri için hazırlanan web sayfası farklı çözünürlük değerlerinde sorun çıkartıyorsa sayfa yüklenmeden ekranın çözünürlük değeri alınarak gerekli işlemler gerçekleştirilebilir.</p>
+<h2>UYGULAMA 4</h2>
+<p>sayfamızı çalıştırdığımız bilgisayarın çözünürlük değerlerini sayfaya yazdıralım</p>
+<script type="text/javascript">
+document.write("ekran çözünürlüğü : ");
+document.write(screen.width+"x"+screen.height);
+document.write("<br/>");
+document.write("kullanılabilir Alan: ");
+document.write(screen.availWidth+"x"+screen.availHeight);
+document.write("<br/>");
+document.write("renk derinliği : ");
+document.write(screen.colorDepth);
+document.write("<br/>");
+
+</script>
+
+
+<h1>ÇERÇEVE NESNESİ</h1>
+<p>html etiketlerinin frame özelliğini kullanılarak tek bir tarayıcı penceresinde birden fazla sayfa görüntülenebilmektedir.JavaScript açısında nher bir frame ayrı bir pencere olarak düşünülerek ayrı ayrı kontrol edilebilir.</p>
+<p><b>top :</b>en üst pencereyi ifade eder yani tarayıcı penceresinin kendisidir.</p>
+<p><b>parent :</b>çerçeveyi oluşturan bölümü ifade eder</p>
+<p><b>self :</b>çerçevenin kendisidir.</p>
+<p><b>frames.lenght :</b>kaç adet frame olduğu verir.</p>
+
+<h2>UYGULAMA 5</h2>
+<p>sayfamıza iki adet frame ekleyerek birinci frame den seçilen işlemi ikinci frame için uygulayalım.</p>
+<iframe src="renkler.html" name="renkler" width="500px"></iframe>
+
+<iframe src="sagsayfa.html" name="sayfa" width="500px"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

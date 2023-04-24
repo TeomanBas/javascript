@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>KONTROL DEYİMLERİ</h1>
+<p>sayfa içerisinde belirli koşula bağlı işlemler yaptırmak birden fazla tekrar etmesi gereken işlemler veya istenilmeyen hataları
+önlemek için kontrol deyimleir ve döngüler kullanılır.koşula bağlı işlemler için if ve switch yapısı döngüler için for ve while yapısı kullanılır.</p>
+
+<h1>karşılaştırma deyimleri</h1>
+<p>sayfa içerisinde çoğu zaman çeşitli koşullara bağlı işlemler gerçekleştirilir.Mesela web tarayıcısının türüne göre o anki saate göre veya kullanıcıdan alınan değere göre işlemler gerçekştirilmek istendiğinde karşılaştırma deyimleri kullanılır.Koşula bağlı deyimler yazılırken koşul ifadesi için karşılaştırma operatörleri birden fazla koşul için mantıksal operatörler kullanılmaktadır.Javascriptte kullanılan karşılaştırma deyimleri karmaşık scriptler geliştirmeye yardımcı olur.</p>
+
+<h1> if - else</h1>
+<p>çoğu programlamadilinde oluduğu gibi javascript içerisinde de  koşula bağlı işlemlerde if-else yapısı çoğunlukla kullanılmaktadır.Belirtilen koşula bağlı tek satırlık komut çalıştırılacaksa if ve else den sonra {} parantezleri kulanmaya gerek yoktur.birden fazla koşula bağlı işlemlerde matıksal operatörler kullanılması ve koşulların parantez içerisinde olması gerekir.else yapısının kullanım zorunluluğu yoktur.</p>
+
+<p>aşağıda if-else yapısını üç farklı kullanımı verilmiştir.</p>
+
+
+<b> 1. kullanım</b></br>
+<p>sadece koşulun sağlanması durumuna göre işlemler gerçekleştirir</p>
+<pre>
+if(koşul_ifadesi)
+{
+koşul sağlanırsa gerçekleşecek
+}
+
+
+
+</pre>
+<b>2. kullanım</b><br/>
+<p>koşulun sağlanması veya sağlanmaması durumuna göre işlemler gerçekleştirir.</p>
+<pre>
+if(koşul_ifadesi)
+{
+koşul sağnırsa gerçekleşecek işlemler
+}
+Else{
+koşul ifadesi sağlanmassa gerçekleştirilebilecek işlemler
+}
+</pre>
+<b>3. kullanım</b><br/>
+<p>farklı koşullara göre farklı işlemler gerçekleştirmek istenildiğinde kullanılır.</p>
+<pre>
+if(koşul_ifadesi_1)
+{
+koşul 1 için gerçekleşecek işlemler
+else if(koşul_ifadesi_2)
+{
+koşul 1 sağlanmassa burası çalıştırılır 
+}
+else if(koşul_ifadesi_3)
+{
+koşul2 sağlamassa buradaki işlemler gerçekleşecek.
+}
+.
+.
+.
+else
+{
+tüm if koşulları sağlanmadığında en son gerçekleştirilecek olan işlemler burada yer alır.
+}
+</pre>
+
+<h1>SWİTCH-CASE</h1>
+<p>seçilen değişkenein belirlenen değerlerden hangisine uygun olduğuna bakarak o değer için belirlenmiş işlemleri gerçekleştirir.Her case ifadesinde yaptırılacak işlemlerden sonra break komutuyla switch yapısından çıkılması gerekmektedir.Aksi takdirde koşula bakılmaksızın diğer komutlarda çalıştırılır.Belirtilen değerlerin hiçbiri sağlanmıyorda default için komutlar işleme konulur.Case ifadesinde belirtilen bir değer olabilecğei igibi bir koşul ifadeside olabilir.
+belirtilen değer sayısal türde ise tırnak içerisine almaya gerek yoktur fakat değer karakter kümesi türündeyse eblirilecek değer tırnak içerisinde olmalıdır.</p>
+<b>kullanım şekli:</b></br>
+<pre>
+switch (değişken)
+{
+case d1:
+	değişkenimizin değeri d1 ise gerçekleştirilecek işlemler
+}break;
+{
+case d2:
+	değişkenimizin değeri d2 ise gerçekleştirilecek işlemler
+}break;
+case d3:
+	değişkenimizin değeri d3 ise gerçekleştirilecek işlemler
+}break;
+. 
+. 
+.
+default:
+	değişkenimiz değeri d1,d2,d3 değilse gerçekleştirilecek işlemler
+	break;
+	}
+
+</pre>
+<p>aynı işlem birden fazla koşula bağlıysa koşulları ayrı ayrı yazarak he koşul için aynı işlemi yazabilirsiniz ama bu programcılık açısında pek doğru bir yol değildir.Bunun yerine iki case ifades alt  alta yazılarak birinci case ifadensinden sonra break kullanılmaz.</p>
+<b>örnek olarak:</b></br>
+
+<pre>
+
+switch (değişken)
+{
+case d1:
+case d2:
+değikenimizin değeri d1 veya d2 ise gerçekleştirilecek işlemler
+}break;
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+var user="ornitorenk";
+var pass="tangalon"
+function kontrol(u,p){
+if(u==user&&p==pass)
+	alert("giriş başarılı");
+else{
+	alert("başarısız giriş");
+	giris();
+	
+}
+}
+
+</script>
+</head>
+<body>
+<h1>UYGULAMA 2 </h1>
+<p>sayfa açılırken kullanıcıdan şifre alarak,şifrenin doğruluğu kontrol edip sayfaya yazdıran javascript kodlarını yazınız</p>
+<script type="text/javascript">
+function giris(){
+var u=prompt("kullanıcı adını giriniz","");
+var p=prompt("paralanızı giriniz","");
+kontrol(u,p);
+}
+giris();
+</script>
+</body>
+</html>

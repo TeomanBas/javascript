@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function tersiniyaz(x){
+
+var uzunluk=x.length;
+var ters_mesaj="";
+for(i=0;i<=uzunluk;i++){
+	ters_mesaj=ters_mesaj+x.charAt(uzunluk-i);
+}
+return ters_mesaj;
+}
+</script>
+
+</head>
+<body>
+<h1>KARAKTER FONKSİYONLARI</h1>
+<p>javascript içerisinde değişken türü tanımlamaya gerek kalmadan değişken tuttuğu değere göre tür almaktadır.karakter türündeki değişkenlere değer atanırken değer tırnak içerisinde yazılmalıdır.</p>
+<pre>
+var deger="merhaba";
+var deger="55";
+</pre>
+<p>yukarıdaki tanımlamalar değer türündeki tanımlamalardır. 55 de karakter türündedir çünkü tırnak içerisinde yazılmıştır.</p>
+<pre>
+var x ='ali'nin kalemi';//yanlış
+var y ='ali/'nin kalemi';//doğru
+var z ="ali'nin kalemi";//doğru
+</pre>
+<p>karakter türündeki ifadeleri birleştirirken "+" operatörü kullanılır.</p>
+<pre>
+var a ="emeğiniz";
+var b ="oyuncağımızdır";
+var c =a+b;//ab değişkeninin değeri 'emeğiniz oyuncağımızdır' olacaktır.
+</pre>
+<h2>LENGTH</h2>
+<p>karakter türündeki bir değişkenin barındırdığı karakter sayısını verir.</p>
+<pre>
+var z="bu sene iyi para kazandık.";
+var uzunluk_z=z.length// değişkenin değeri 26 olacaktır.
+
+</pre>
+<h2>indexOf()</h2>
+<p>string değişken içerisinde yer alan bir karakter ya da karakter grubunun konumu hakkında bilgi verir.
+Sonuç -1 ise belirtilen karakter ya da karakter grubu yoktur.
+0 veya daha büyükse dönen değer karakterin bulunduğu index değerini belirtir.
+Karakterlerin indeks değeri 0(sıfır)'dan başlar.boşluklarda karakter olarak sayılmaktadır.
+</p>
+<pre>
+var a="gaziosmanpaşa üniversitesi";
+var b=a.indexOf("G");//G değeri ilk karakter olduğu için 0 verecektir.
+var b=a.indexOf("x");//x karakteri olmadığı için -1 verecektir.
+</pre>
+<h2>chartAt()</h2>
+<p>parametre olarak verilen index değerine karakter kümesi içinde içerisinde karşılık gelen değeri verir.</p>
+<pre>
+var a="okulunda adı var ";
+var b=a.chartAt(7);//0'dan başladığı için /.karakter d olacaktır.
+</pre>
+
+<h2>UYGULAMA </h2>
+<p>kullanıcıdan alınan bir bilginin tersini alarak mesaj olarak verdirelim</p>
+
+<pre></pre>
+
+<script type="text/javascript">
+var girilen=prompt("lütfen mesajını gir","");
+alert(tersiniyaz(girilen));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>DÖNGÜ DEYİMLERİ</h1>
+<h2>for döngüsü</h2>
+<p>belirli miktarda tekrarlanması istenen durumlarda kullanılır.Döngünün tekrar sayısı sayaç değişkenine göre gerçekleştirilir.sayacımızı istediğimiz sayıdan başlatıp istediğimiz sayıda sonlandırılabilir ve artış miktarını ayarlayabiliriz.çok fazla kod satırında oluşan benzer işlemler döngü sayesinde daha az sayısa satırla gerçekleştirilir.</p><br/>
+<b>kullanım şekli:</b>
+<pre>
+for(sayac değişkeni=başlangıç değeri;sonlandırma şartı;değişim miktarı){
+gerçekleşmesi istenilen işlemler
+}
+</pre>
+<p>döngüye bağlı gerçekleşecek işlemler tek satırdan oluşuyorsa parantez içerisine almaya gerek yoktur.</p>
+
+<h3>UYGULAMA 1</h3>
+<p>ekrana 5 defa merhaba dünya yazdıralım</p>
+<pre>
+< script type="text/javascript" >
+for(a=1;a<=5;a++)
+	document.write("merhaba dünya");
+< /script >
+</pre>
+<script type="text/javascript">
+for(a=1;a<=5;a++)
+	document.write("merhaba dünya<br/>");
+</script>
+
+<h3>UYGULAMA 2</h3>
+<p>1 ile 20 arasındaki çift sayıları ekrana yazdıralım.</p>
+<pre>
+< script type="text/javascript" >
+for(a=0;a<=20;a++)
+	a%2==0?document.write(a+" sayısı çifttir< br/ >"):document.write(" sayı tek olduğu için elendi< br/ >");
+
+< /script >
+</pre>
+<script type="text/javascript">
+for(a=0;a<=20;a++)
+	a%2==0?document.write(a+" sayısı çifttir<br/>"):document.write(" sayı tek olduğu için elendi<br/>");
+
+</script>
+<h3>UYGULAMA 3</h3>
+<p>5 elemanlı bir dizinin elemanlarını sayfaya yazdıralım</p>
+
+<pre>
+< script type="text/javascript">
+meyveler= array("elma","muz","kiraz","şeftali","portakal","kayısı");
+for(say=0;say<=5;say++){
+	document.write(meyveler[say]+"< br/>");
+}
+< /script>
+</pre>
+<script type="text/javascript">
+var meyveler=new Array("elma","muz","kiraz","şeftali","portakal","kayısı");
+for(say=0;say<=5;say++){
+	document.write(say+". indeks :"+meyveler[say]+"<br/>");
+}
+</script>
+
+
+
+
+
+
+
+
+<h3>UYGULAMA 4</h3>
+<p>çarpım tablosunu iç içe iki for döngüsüyle ekrana yazdıralım</p>
+<pre>
+< script >
+< table border="1px" >
+
+for(a=0;a<=10;a++){
+	document.write("< tr>");
+	for(b=0;b<=10;b++){
+		document.write("< td>"+a*b+"< /td>");
+	}
+	document.write("< /tr>");
+}
+< /table >
+
+< /script >
+</pre>
+<script type="text/javascript">
+document.write("<table border='1px'>");
+
+for(a=1;a<=10;a++){
+	document.write("<tr>");
+	for(b=1;b<=10;b++){
+		document.write("<td>"+(a*b)+"</td>");
+	}
+	document.write("</tr>");
+}
+document.write("</table>");
+</script>
+
+
+<h2>while döngüsü</h2>
+<p>while döngüsü verilen şart gerçekleşene kadar belirtilen komutları gerçekleştirir.Eğer şart hiç gerçekleşmezse döngü çalışmayacaktır.Şart için kullanılan değişkenin değerini kodlar vasıtasıyla artırmak gerekir Şart bağlı değişken değeri sürekli aynı kalırsa sonsuz döngüye girecektir.
+bunun için değişken değeri otomatik olarak değişmiyorsa kodlarımızı buna göre hazırlamamız gerekir .for döngüsünden ayrıldığı en önemli nokta belirli bir sayıda değilse şart gerçekleşene kadar devam etmesidir.</p>
+<b>kullanım şekli :</b>
+
+<h3>UYGULAMA 5</h3>
+
+<pre>
+while(şart){
+gerçekleşmesi istenen işlemler
+}
+</pre>
+
+<script type="text/javascript">
+
+var i=3;
+while(i<=30){
+	document.write(i);
+	document.write("<br>");
+	i+=3;
+}
+
+</script>
+
+<h3>UYGULAMA 6</h3>
+
+<pre> 
+< script type="text/javascript" >
+var sayac =1;
+var secim=true;
+var carpim=1;
+while(secim!=false){
+carpim*=3;
+secim=confirm(sayac + " . kez soruyorum .işleme devam edeyim mi?");
+sayac++;
+}
+document.write(sayac-1+"kez işlem yapıldı.");
+document.write("< br/ >sonuc : ", carpim);
+< /script >
+</pre>
+
+<script type="text/javascript">
+var sayac =1;
+var secim=true;
+var carpim=1;
+while(secim!=false){
+carpim*=3;
+secim=confirm(sayac + " . kez soruyorum UYGULAMA 6 İÇİN işleme devam edeyim mi?");
+sayac++;
+}
+document.write(sayac-1+"kez işlem yapıldı.");
+document.write("<br>sonuc : ", carpim);
+</script>
+
+
+<h2>do...while döngüsü</h2>
+<p>while döngüsüne çok benzer farkı şarın doğrulanmasının başta değil de sonta gerçekleşmesidir.do-while döngüsünde şart sonda olduğu için şart sağlanmamış olsa bile döngü bir kez çalışacaktır
+özellikle kullanıcıyla etkileşim kuran sayfalarda kullanılmaktadır.örneğin kullanıcıya bir soru yönetmek istendiğinde kullanıcının daha önce vermiş olduğu bir cevap olmadığı için döngü bir kez çalışmak zorundadır.
+bundan sonra kullanıcı isterse döngü devam eder istemezse etmez.
+
+bir dizi değilenimizde 4 adet kampanyanın kodları bulunmaktadır.kullanıcı sayfayı açtığında ilk kampanya bilgisi verilecek ve kullanıcıya diğer kampanyaları görüp gömek istemedği sorulacaktır.Kullanıcı 
+"tamam "seçeneğini seçerse diğer kampanyayı gösterecek ve bu şekilde son kampanyaya kadar kullanıcı "iptal " seçeneğini seçene kadar devam edecektir.
+</p>
+<b>kullanım şekli:</b>
+<pre>
+do{
+	gerçekleşmesi istenilen işlemler
+}while(şart):
+
+
+</pre>
+
+<h3>UYGULAMA 7</h3>
+
+<pre>
+
+< script type="text/javascript" >
+var kampanya = new Array ("kapmanya1","kapmanya2","kapmanya3","kapmanya4","kapmanya5");
+var k_sayisi=kampanya.length;
+var i=0;
+do{
+	cevap=confirm(kampanya[i]+"sizleri bekliyor...\n\n diğer kampanları görmek istemisiniz.istemiyorsanız \"İPTAL\"seçin");
+	i++;
+	
+}while(i<k_sayisi && cevap==true);
+
+< /script >
+
+</pre>
+
+<script type="text/javascript">
+var kampanya = new Array ("kapmanya1","kapmanya2","kapmanya3","kapmanya4","kapmanya5");
+var k_sayisi=kampanya.length;
+var i=0;
+do{
+	cevap=confirm("UYGULAMA 7 : "+kampanya[i]+" sizleri bekliyor...\n\n diğer kampanları görmek istemisiniz.istemiyorsanız \"İPTAL\"seçin");
+	i++;
+	
+}while(i<k_sayisi && cevap==true);
+
+</script>
+
+<h2>BREAK (DÖNGÜ SONLANDIRMA)</h2>
+
+<p>for döngülerinde döngü belirtilen sayıda çalıştıktan sonra durucaktır.bazı durumlarda döngü sonuna kadar beklenmeden istenilen adımda durdurmak istenebilir.bu gibi durumlarda break komutu döngünün işlevini sonlandıracak ve program akışı döngüden sonraki ilk işlemden devam edecektir.</p>
+<h3>UYGULAMA 8</h3>
+<p>bir değeri dizi değişken içerisinde arattırarak kaçıncı index değerinde bulunduğunu sayfaya yazdıralım burada dikkat edilmesi gereken nokta aranan değer dizi içerisinde bulunduğunda dizinin diğer elemanlarını kontrol etmeye gerek kalmadan döngü sonlandırılacaktır.</p>
+<pre>
+< script type="text/javascript" >
+
+var x =new Array(3,5,67,8,9,0,34);
+var e_sayisi=x.length;
+var sonuc=false;
+var aranan=prompt("aranacak değeri giriniz","");
+
+for(i=0;i<=e_sayisi;i++){
+	if(x[i]==aranan){
+	document.write("aranan değer",i,"nolu indekste");
+	sonuc=true;
+	break
+	}
+	
+}
+if(sonuc==false)
+	document.write("< b >aranan değer dizi içerisinde yok< /b >");
+
+< /script >
+</pre>
+<script type="text/javascript">
+
+var x =new Array(3,5,67,8,9,0,34);
+var e_sayisi=x.length;
+var sonuc=false;
+var aranan=prompt("aranacak değeri giriniz","");
+
+for(i=0;i<=e_sayisi;i++){
+	if(x[i]==aranan){
+	document.write("aranan değer",i,"nolu indekste");
+	sonuc=true;
+	break;
+	}else{
+	document.write("lütfen bir değer giriniz");
+	sonuc=true;
+	break;
+	}
+	
+}
+if(sonuc==false)
+	document.write("<b>aranan değer dizi içerisinde yok</b>");
+
+</script>
+
+<h2>CONTİNUE (DÖNGÜDE BASAMAK ATLAMA)</h2>
+<p>döngü çalıştığı süre içerisinde alanmak istenilen belirli adımlar varsa continue komutu kullanılır.Continue komutu döngünün sadece o anki adımını atlayarak bir sonraki adımdan devam etmesini sağlar bir sonraki adım yoksa doğal olarak döngü sonlanacak ve döngüden sonraki ilk bölümden devam edilecektir.</p>
+
+<h3>UYGULAMA 9 </h3>
+<p>1 ile 20 arasındaki sayılardan 3 ün katı olanlar hariç diğerlerini iki sütunlu tablo halinde sayfaya yazdıralım</p>
+<pre></pre>
+<script type="text/javascript">
+document.write("<table border='1px'>");
+document.write("<tr>");
+for(sayi=0;sayi<=20;sayi++){
+	if(sayi%3!==0){
+		document.write("<td>"+sayi+"</td>");
+	}else{
+		document.write("</tr>");
+	
+	}
+}
+
+document.write("</table>");
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

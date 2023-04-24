@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>UYGULAMA 1</h1>
+<p>HTML etikerine javascript ile erişme ve değerlerini değiştirmeye yönelik bir uygulama yapalım.</p>
+<p><b>TEK SAYILAR</b></p>
+<p>0</p>
+<p>2</p>
+<p>4</p>
+<p>6</p>
+
+<script type="text/javascript">
+function duzelt(){
+document.getElementsByTagName("p")[1].innerHTML="ÇİFT SAYILAR";
+}
+
+</script>
+<input type="button" value="gönder" onClick="duzelt()">
+
+
+
+
+
+
+<h1>UYGULAMA 2</h1>
+<p>HTML etiketleirne javascript ile erişme ve değerlerini değiştirmeye yönelik bir uygulama yapalım</p>
+<p>içecekler</p>
+<li>kahve</li>
+<li>çay</li>
+<li id="sil">tokat kebabı</li>
+<button onclick="fonk1()">öğren</button>
+<button onclick="fonk2()">sil</button>
+<p id="etiket"></p>
+
+<script type="text/javascript">
+
+function fonk1(){
+
+var x =document.getElementsByTagName("LI");
+document.getElementById("etiket").innerHTML=x[0].innerHTML;
+
+}
+
+function fonk2(){
+
+var item=document.getElementById("sil");
+item.parentNode.removeChild(item);
+
+}
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

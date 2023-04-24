@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>window.location.protocol</h1>
+<p>bu özellik sayesinde yüklenen sayfanın internetten mi yoksa sabit diskten mi geldiği öğrenilebilir.dönen sonuö http: ise internetten file: ise sabit diskten geldiğini gösterir.bu komut açılan sayfanın kaynağı öğrenilmek istenilen sayfanın içerisinde kullanılmalıdır.
+kodların yazıldığı pencere içerisinde kullanıcaksa location.protocol şeklinde kullanılabilir</p>
+<pre>sayfanın kaynağını mesaj olararak vermektedir.
+alert(window.location.procokol);
+</pre>
+<script type="text/javascript">alert(window.location.protokol);</script>
+
+<h1>window.location.href</h1>
+<p>sayfamızı istenilen bir adrese yönlendirmek veya aktif olan adresi öğrenmek için kullanılır.kodların yazıldığı pencere içerisinde kullanıcaksa location.href şeklinde kullanılabilir</p>
+<pre>
+degisken=window.location.href şeklinde kullanılırsa aktif adresi değişkenin içerisine atacaktır.
+window.location.href(URL) şeklinde kullanılırsa belirtilen adrese gidecektir.
+</pre>
+
+<script type="text/javascript">
+window.location.replace('file:///19_yonlendirme_yolu.html');
+
+</script>
+<p>window.location href fonksiyonuyla yapılan yönlendirmelere kullanıcı web tarayıcısından "geri" butonuna tıklayarak önceki sayfaya gelebilir yönlendirme yapıldıktan sonra "geri " özelliğinin devre dışı kalması için window.location.replace fonksiyonu kullanılır.bu fonksiyonda yönlendirme işlemini
+yapacak ancak geri alma işlemini devre dışı bırakacaktır.</p>
+<h1>window.history.go</h1>
+<p>history özelliği ile daha önceki sayfalara geri dönülebilir.Web tarayıcısında bulunan "ileri " ve "geri" butonlarının görevini yapar."-1" paramtresi ile bir önceki sayfaya dönülebileceği gibi bu değer artırılarak daha önceki sayfalara da gidilebilir.</p>
+<pre>window.history.go(-1) //bir önceki sayfaya veya -2 veririsek 2 önceki sayfaya dönebilir.</pre>
+
+<h1>window.status</h1>
+<p>status pencerenizin alt kısmında duru çubuğunda bulunan sayfa yükleme durumunu gördüğünüz bölümdür.Sayfa yükleme mesajı yerine istediğiniz bir mesajı buraya yazabilirsiniz</p>
+<pre>window.status("asdfg bilişim sistemleri");</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>UYGULAMA</h1>
+<p>kullanıcının seçmiş olduğu birinci rengi butona tıklayınca sayfaya 2.rngi çerçeve içerisindeki yazıya uygulayan genişlik artır ve azalt düğmeleri yardımıyla çerçevenin genişliğini artırıp azaltabilen kodları hazırlayalım.</p>
+<b>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</b>
+<script type="text/javascript">
+function renk_uygula(){
+secili_renk1=document.getElementById('renk1').value;
+secili_renk2=document.getElementById('renk2').value;
+document.bgColor=secili_renk1;
+document.getElementById('cerceve').style.color=secili_renk2;
+}
+function genislik_artir(){
+m_genislik=document.getElementById('cerceve').style.width;
+a_1=m_genislik.substr(0,3);
+a_1=parseInt(a_1)+20;
+//alert(a_1);
+document.getElementById('cerceve').style.width=a_1+'px';
+
+}
+function genislik_azalt(){
+m_genislik=document.getElementById('cerceve').style.width;
+a_1=m_genislik.substr(0,3);
+a_1=parseInt(a_1)-20;
+document.getElementById('cerceve').style.width=a_1+'px';
+
+}
+
+
+
+
+
+
+
+</script>
+
+
+<div id="cerceve" style="border:1px solid cyan; width:150px">SAYFAMIZA HOŞGELDİNİZ</div>
+<input type="button" value="<-- genişliği azalt" onClick="genislik_azalt()">
+<input type="button" value="genişliği artır -->"onClick="genislik_artir()">
+<br/><br/>
+1.RENK ZEMİN RENGİ
+<select id="renk1">
+	<option value="" selected></option>
+	<option value="blue">Mavi</option>
+	<option value="red">Kırmızı</option>
+	<option value="green">Yeşil</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.RENK ÇERÇEVE YAZI RENGİ
+<select id="renk2">
+	<option value="" selected></option>
+	<option value="white">BEYAZ</option>
+	<option value="pink">Pembe</option>
+	<option value="green">Yeşil</option>
+</select>
+
+<input type="button" value="Uygula" onclick="renk_uygula()">
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+
+</head>
+<body id="govde" style="background:">
+
+<table name="tablo" border="1px">
+<tr id="1"><td>aasdsadfsdf</td><td>asdasdfasdff</td></tr>
+<tr id="2"><td>asdfsadf</td><td>sadfssadfasdadf</td></tr>
+<tr id="3"><td>asddfasfsadf</td><td>asdfsadfsadf</td></tr>
+<tr id="4"><td>fghadfsadffgh</td><td>fghfsdfgsgh</td></tr>
+<tr id="5"><td>dfhdfgsdfgfgh</td><td>fdhfgsdfgdsfghfg</td></tr>
+<tr id="6"><td>aasdsfgdfgdf</td><td>assdfgdsfdf</td></tr>
+<tr id="7"><td>asdfsadf</td><td>sadfsasdfgdf</td></tr>
+<tr id="8"><td>asdfsadf</td><td>asdsdfgfsadf</td></tr>
+<tr id="9"><td>fghhgkhgfgh</td><td>fgsdfghfgh</td></tr>
+<tr id="10"><td>dfghkhjkhfgh</td><td>fdhsdfgfghfg</td></tr>
+<tr id="11"><td>aashgkhjkhjkdf</td><td>asdfgsdfgf</td></tr>
+<tr id="12"><td>ashjkghkdfsadf</td><td>sadfsadsfgdf</td></tr>
+<tr id="13"><td>asdghkhgkhjfsadf</td><td>asdfssdfgdsfgadf</td></tr>
+<tr id="14"><td>fghhjkhjfgh</td><td>fghfgdsfgdsfgh</td></tr>
+<tr id="15"><td>dfhasdfasdffgh</td><td>fdhfgsdfdfhfg</td></tr>
+<tr id="16"><td>aasdf</td><td>assdfgsdfgdf</td></tr>
+<tr id="17"><td>asdfseqwrtertadf</td><td>sadfsdfgsdfgsadf</td></tr>
+<tr id="18"><td>asdfsadf</td><td>asdfsadf</td></tr>
+<tr id="19"><td>fghfsdfgsdfggh</td><td>fghfdfgdgh</td></tr>
+<tr id="20" onMouseover="degis()" onMouseout="duzel()" ><td>dfhfghsdfgsdfg</td><td>fdhfgcvbxcvhfg</td></tr>
+</table>
+<script type="text/javascript" language="javascript">
+var elem=document.getElementById("tablo");
+var trs=document.getElementsByTagName("tr",elem);
+
+for(var i=1;i<trs.length;i++){
+if(i%2==1){
+trs[i].style.background="#999999";
+}
+}
+function degis(){
+var renk='red';
+document.body.style.background=renk;
+}
+function duzel(){
+var renk='';
+document.body.style.background=renk;
+}
+</script>
+
+</body>
+</html>

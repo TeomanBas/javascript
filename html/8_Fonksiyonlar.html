@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function selamla(slogan){
+alert(slogan);
+}
+
+function kiyasla(deger_1,deger_2){
+var buyuk;
+if(deger_1>deger_2)
+	buyuk=deger_1;
+else
+	buyuk=deger_2;
+	
+return buyuk;
+	
+}
+function liste_yaz(x){
+document.write("<ul>");
+for(i=0;i<=x.length;i++){
+	document.write("<li>"+x[i]+"</li>");
+
+}
+document.write("</ul>");
+}
+
+</script>
+</head>
+<body>
+<h1>FONKSİYONLAR</h1>
+<p>bazı işlemler her gerektiğinde yeniden kodlar yazılarak yapılmaması için fonksiyonlar oluşturulur ve bu fonksiyonlara parametreler
+girilerek istenilen parametrelere özgü hesaplamar ve işlemler yaptırılabilir .örneğin bir alışveriş sitesindeki sepet işlemleri veya bir butona atanan görevler gibi ...
+fonksiyonlar farklı sayfalarda olmalıdır ve head kısmında çağırılmalıdırlar.fonksiyon içerisindeki değişkenler sadece yerel değişkenler olup o fonksiyon içerisinde geçerli olurlar.
+fonksiyonu tanımlamaya function komutu ile başlanır ve fonksiyon adı girilir bunun yanına parantezler içerisinde argumanlar yazılır ve fonksiyona dışarında değer verilmiş olur.
+fonksiyona değer girilmeyecek olsa bile fonksiyon için parantezlerin kullanılması gerekir.fonksiyonun çalışması sonucunda dönen değer fonksiyonun çağrıldığı yere gönderilir. yani fonksiyon dönen değer denir.
+</p>
+<b>kullanım şekli : </b>
+<pre> 
+< script type="text/javascript" >
+function fonksiyon_ismi(parametre1,parametre2,parametre3,...,parametre_n){
+yapılması gereken işlemler
+}
+< /script >
+</pre>
+<script type="text/javascript">
+	selamla("UYGULAMA 1:sloganımız dünyaya merhaba demek");
+</script>
+<script type="text/javascript">
+var girilen_1=prompt("UYGULAMA 2:birinci sayıyı giriniz : ","");
+var girilen_2=prompt("UYGULAMA 2:birinci sayıyı giriniz : ","");
+girilen_1=parseInt(girilen_1);
+girilen_2=parseInt(girilen_2);
+var sonuc =kiyasla(girilen_1,girilen_2);
+alert("UYGULAMA 2:buyuk sayı : "+sonuc);
+
+</script>
+<script type="text/javascript">
+var gunler= new Array("pazar",
+						"pazartesi",
+						"salı",
+						"çarşamba",
+						"perşembe",
+						"cuma",
+						"cumartesi");
+document.write("----------------------------------------GÜNLER-------------------------------------------------<br/>");
+liste_yaz(gunler);
+</script>
+</body>
+</html>

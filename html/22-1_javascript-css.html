@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<h1>JAVASCRİPT VE CSS</h1>
+<p>css(cascading style sheets) html olarak hazırlanmış sayfayı dinamik hale getirmenin ve görsel olarak süslemenin en önemli unsurlarında birisidir.Örneğin sayfa kaydırma çubuklarının rengini değiştirme nesneye yazılan bilginin otomatik büyük harfe çevrilmesi linklere kısa yoldan efekt verme gibi birçok işlem css kullanarak gerçekleştirilebilir.Javascript yardımıyla css özellikleri değiştirilebilir veya yeni özellik verilebilir.</p>
+<p>örnek olarak javascript ve css yardımıyla tablonun satırı üzerine fare geldiğinde zemin rengi ve yazı rengini değiştirelim</p>
+<table width="150">
+<tr onMouseOver="this.bgColor='red'; this.style.color='white'" onMouseout="this.bgColor='';this.style.color=''"><td>1.satır</td></tr>
+<tr onMouseOver="this.bgColor='red'; this.style.color='white'" onMouseout="this.bgColor='';this.style.color=''"><td>2.satır</td></tr>
+
+
+</table>
+<p>yukarıdaki örnekte this.bgColor yöntmeiyle zemin rengi this.style.color yöntemiyle yazı rengi değiştirilmektedir.ONmouseout olayında bu fonksiyonlara renk verilmeden boş bırakılmasının nedeni default yani eski haline dönmesi içindir bu ili yöntem sadece tablolar için geçerli değildir istenilen tüm html nesneleirinde kullanılabilir.</p>
+<p>javascript yardımıyla css kullanırken this eki her zaman geçerli değildir this eki her zaman geçerli değildir this eki kodun yazıldığı nesne üzeirnde değişiklik yapmak için kullanılır farklı bir nesnein özelliğini değiştirmek için aşağıdaki yöntemlerden birisi kullanılmaklıdır.</p>
+<code>document.all.id.style.değişecek_özellik="yeni deger";</code>
+<code>document.getElementById(id).style.değişecek_özellik="yeni deger";</code>
+<p>id:sayfanızda bulunan ve özelliği değiştirilecek nesnein id değeridir.nesne oluşturulurken istenilen id için istenilen bir değer verilebilir(< table id="tablom" >)</p>
+<p>değişecek_özellik:Nesnenizin değiştirmek istediğiniz özelliğidir.Bu özellik rasgele bir bilgi değildir.Bu özelliklerin bir kısmı aşağıda tablo halinde verilmiştir.</p>
+<p>javascript yardımıyla değiştirilebilecek css özelliklerinden bazıları ek 3 teki tabloda verilmiş(internetten den bulunaiblir veya sürümlerin değişmesiyle güncellemeler olabilir ana kaynakların sitelerin takip ve kontrol edilmelidirler)</p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function oturum_sayaci(d_oturum=5000){
+zaman=setTimeout("oturum_sorgu()",d_oturum);
+
+}
+function oturum_sorgu(){
+sorgu=confirm("oturum açık kalsın mı?");
+if(sorgu==true){
+oturum_sayaci();
+}else{
+clearTimeout(zaman);
+alert("oturum sonlandırıldı");
+}
+}
+</script>
+</head>
+<body>
+<h1>clearTimeout()</h1>
+<p>setTimeout fonksiyonu ile ayarlanmış zamanlama işlemini iptal eder iptal işlemi için setTimeout fonksiyonu ile oluşturulan zamanlama bir değişkene atanmalıdır.clearTimeout fonksiyonuna parametre olarak setTimeout fonksiyonunun atandığı değişken verilmelidir.
+</p>
+<b>kullanım şekli : </b>
+<pre>clearTimeout(zamanlama_değişkeni)</pre>
+<h2>UYGULAMA</h2>
+<p>web tarayıcımızın durum çubuğunda ziyaretçinin sitede hiçbir işlem yapmadan kaç saniye kaldığını gösterilecek süre 59 olduğunda sayma işlemi durdurarak kullanıcıya süresinin dolduğu mesajını verdirelim</p>
+<script type="text/javascript">
+oturum_sayaci();
+
+</script>
+
+</body>
+</html>

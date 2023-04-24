@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<style type="text/css">
+
+
+
+
+.basarili{
+height:200px;
+width:500px;
+margin:5% 30% ;
+background-color:green;
+padding-top:100px;
+padding-left:100px;
+font-size:50px;
+font-weight:1000;
+color:white;
+border-style:solid;
+border-color:yellow;
+border-size:10px;
+
+
+
+}
+.basarisiz{
+height:200px;
+width:500px;
+margin:5% 30% ;
+background-color:red;
+padding-top:100px;
+padding-left:100px;
+font-size:50px;
+font-weight:1000;
+color:white;
+border-style:solid;
+border-color:yellow;
+border-size:10px;
+
+
+}
+</style>
+
+
+</head>
+<body>
+<h1>UYGULAMA </h1>
+<p>sayfaya 2 adet layer ekleyere bunları gizleyiniz sayfa çılırken kullanıcıdan şifre girmesini isteyerek şifr doğrulamasını yapınız şifrenin doğru ve yanlış olması durumuna göre iki layerden birisini görünür duruma getirin layer gizlemek(layer gizlemek ve görünür yapmak için visibility özelliği kullanılır.)</p>
+<div id="basarili_giris" class="basarili" style="visibility:hidden;">GİRİŞ BAŞARILI</div>
+<div id="basarisiz_giris" class="basarisiz" style="visibility:hidden;">BAŞARISIZ GİRİŞ</div>
+<script type="text/javascript">
+var k_adi="admin";
+var sifre="12345";
+var k_adi_giris=prompt("kullanıcı adınızı giriniz","");
+var sifre_giris=prompt("şifrenizi giriniz","");
+if(k_adi==k_adi_giris && sifre==sifre_giris){
+	document.getElementById('basarili_giris').style.visibility="visible";
+}else
+	document.getElementById('basarisiz_giris').style.visibility="visible";
+
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<style type="text/css">
+input{
+width:200px;}
+</style>
+<script type="text/javascript" >
+function pencere_ac(){
+pencere_degiskeni=window.open("http://www.google.com.tr");
+}
+function acilani_kapat(){
+if(pencere_degiskeni!=null){
+	pencere_degiskeni.close();
+}else
+	alert("belirtilen isimde pencere açılmamış!");
+}
+function kendini_kapat(){
+	window.close();
+}
+
+</script>
+
+</head>
+<body>
+<h1>"windows" nesnesi</h1>
+<p>açık olan pencereye yani web tarayıcıcısına ait özellikler ile ilgili bir nesnedir.Oanki kullanılan pencere üzerinde işlem yaparken window etkini koymadan komutlar yazılabilir.Ama farklı bir pencere oluşturulacaksa veya farklı bir pencere üzerinde işlem yapılacaksa window kullanılmalıdır.</p>
+<h2>yeni pencere açmak veya açık pencereyi kapatmak</h2>
+<p>yeni bir pencere açmak ve bu pencerenin özelliklerini değiştirmek için window nesnesinin open, kapatmak için close özelliği kullanılır.</p>
+<b>YENİ PENCERE AÇMAK</b>
+<pre>
+window.open("açılacak adres","pencere_adi","pencere özellikleri");
+</pre>
+<p>açılacak adres kısmına herhangi bir adres yazılabileceği gibi kendi sitemizde bulunan dosya adı yoluyla birlikte yazılabilir.Pencere adı olarak istenilen bir ad kullanılabilir.Açılacak pencerelere sürekli aynı pencere adı kullanılırsa, pencere açıkken tekrar pencere açmak istendiğinde açılacak sayfa yeni pencere açmadan diğer açılmış olan pencere içerisinde açılacaktır.Pencere özellikleri açılan  pencerenin özelliklerini değiştirmek için kullanılır.</p>
+<table border="1px">
+<tr><th>ÖZELLİK</th><th>AÇIKLAMA</th></tr>
+<tr><td>menubar</td><td>tarayıcıların en üst kısmında bulunan menülerin satırdır.no değerini alırsa açılan pencere görünmez,yes değerini alırsa görünür.</td></tr>
+<tr><td>toolbar</td><td>tarayıcıların üst kısımda geri ileri vb.tuşların bulunduğu kısımdır.no değerini alırsa açılan pencere görünmezyer değerini alırsa görünür.</td></tr>
+<tr><td>location</td><td>gitmek istediğiniz adresi yazdınız adres satırıdır.no değerini alırsa açılan pencere görünmez yes değerini alırsa görünür.</td></tr>
+<tr><td>status</td><td>sayfa yüklenme durumunu gösteren kısımdır yani durum çubuğudur.no değerini alırsa açılan pencerede görünmez yes değerini alırsa görünür.</td></tr>
+<tr><td>scrollbars</td><td>sayfanın dikey ve yatay kaydırma çubukları no değerini alırsa açılan pencerenin boyutlarıdeğitirilemez yes değerini alırsa değiştirilebilir.</td></tr>
+<tr><td>resizable</td><td>açılan pencerenin boyutlarını değğiştirmeye izin verilmesi no değerini alırsa açılan pencerenin boyutları değiştirilemez yes değerini alırsa değiştirilebilir</td></tr>
+<tr><td>width</td><td>açılacak pencerenin pixel türünden genişliğini belirler</td></tr>
+<tr><td>height</td><td>açılacak pencerenin pixel türünde yüksekliğini belirler</td></tr>
+<tr><td>left</td><td>açılacak pencerenin ekranın sol tarafında uzaklığını belirler</td></tr>
+<tr><td>top</td><td>açılacak pencerenin ekranın üst tarafından uzaklığını belirler.</td></tr>
+
+</table>
+<h2>UYGULAMA 1</h2>
+<p>yeni pencerede bir adres açıp menu ve araç çubuğu kısımlarının görünmemesini sağlayacağız.kaydrıma cubuğu ve adres çubuğu görünecek sayfanın genişliği 200px ve yüksekliği 300px olacaktır.</p>
+<pre>
+< script type="text/javascript">
+window.open("http://www.google.com.tr","goooooooooogle","menubar=no,toolbar=no,scrollbars=no,location=no,width=200,height=200");
+< /script >
+</pre>
+<script type="text/javascript">
+//window.open("http://www.google.com.tr","goooooooooogle","menubar=no,toolbar=no,scrollbars=no,location=no,width=200,height=200");
+</script>
+<h2>UYGULAMA 2</h2>
+<p>sayfamıza üç adet buton ekleyerek yeni pencere açma açılan pencereyi kapatma ve kodların bulunduğu pencereyi kapatma işlemini gerçekleştirelim</p>
+<input type="button" onClick="pencere_ac()" value="pencere aç"><br/>
+<input type="button" onClick="acilani_kapat()" value="açılanı kapat"></br>
+<input type="button" onClick="kendini_kapat()" value="kendini kapat"><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

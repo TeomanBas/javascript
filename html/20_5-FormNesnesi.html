@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function hesapla(islem){
+var deger_1=parseInt(document.islem.deger_1.value);
+var deger_2=parseInt(document.islem.deger_2.value);
+switch(islem){
+case "topla":
+var sonuc=deger_1+deger_2;
+document.islem.sonuc.value=sonuc;
+break;
+case "cikar":
+var sonuc=deger_1-deger_2;
+document.islem.sonuc.value=sonuc;
+break;
+case "carp":
+var sonuc=deger_1*deger_2;
+document.islem.sonuc.value=sonuc;
+break;
+case "bol":
+var sonuc=deger_1/deger_2;
+document.islem.sonuc.value=sonuc;
+break;
+
+
+}
+}
+</script>
+
+</head>
+<body>
+<h1>UYGULAMA 6</h1>
+<p>forma eklediğimiz iki text nesnesinin içeriğine göre butonlarda seçilen matematiksel işlemi gerçekleştirelim</p>
+<form name="islem">
+<table border="1px">
+<tr><td>birinci değer :</td><td><input type="text" name="deger_1"></td></tr>
+<tr><td>ikinci değer  :</td><td><input type="text" name="deger_2"></td></tr>
+<tr><td>sonuç         :</td><td><input type="text" name="sonuc"></td></tr>
+<tr><td colspan="2"><input type="button" name="topla" value="TOPLA" onClick="hesapla('topla')">
+<input type="button" name="cikar"value="CİKAR" onClick="hesapla('cikar')">
+<input type="button" name="carp" value="ÇARP" onClick="hesapla('carp')">
+<input type="button" name="bol" value="BÖL" onClick="hesapla('bol')"></td></tr>
+</table>
+</form>
+</body>
+</html>

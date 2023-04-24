@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" language="javascript">
+
+var zamanlayici=null;
+function dur(){
+clearTimeout(zamanlayici);
+}
+
+function basla(){
+var tarihsaat=new Date();
+var saat=tarihsaat.getHours();
+var dakika=tarihsaat.getMinutes();
+dakika=(dakika < 10)?"0":"" + dakika;
+var saniye =tarihsaat.getSeconds();
+saniye=((saniye <10)? "0":"")+saniye;
+var clock =saat +":" + dakika + ":" + saniye;
+document.forms[0].display.value=clock;
+zamanlayici=setTimeout("basla()",1000);
+}
+
+</script>
+</head>
+<body>
+<form>
+<input type="text" name="display" size="20"><br>
+<input type="button" value="baslat" onclick="basla()"><br>
+<input type="button" value="durdur" onclick="dur()">
+</form>
+</body>
+</html>

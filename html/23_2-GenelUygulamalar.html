@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" language="javascript">
+var resim1=new Image();
+resim1.src="../images/redbuton.png";
+var resim2=new Image();
+resim2.src="../images/greenbuton.png";
+function resim_degis(hedef,yeniresim){
+	document.images[hedef].src=eval(yeniresim+".src");
+}
+
+
+</script>
+
+</head>
+<body>
+<img height="500px" width="500px"src="../images/redbuton.png" name="resim" onMouseover="resim_degis('resim','resim2')" onMouseout="resim_degis('resim','resim1')">
+
+</body>
+</html>

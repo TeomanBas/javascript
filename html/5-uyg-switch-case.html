@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+
+var kdv=new Array(18,8,8);
+var fiyat=new Array(500,450,800);
+
+
+
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+var urun=prompt("ürün türü giriniz : ","meyve/içecek/mutfak erzakları");
+
+switch(urun)
+{
+case "meyve":
+document.write("seçilen ürün türü : ",urun);
+document.write("<br/> Ürün fiyatı : ",fiyat[0],"TL<br/>");
+document.write("KDV dahil fiyatı : ",(fiyat[0]*kdv[0]/100+fiyat[0]),"TL");
+break;
+
+case "içecek":
+document.write("seçilen ürün türü : ",urun);
+document.write("<br/> Ürün fiyatı : ",fiyat[1],"TL<br/>");
+document.write("KDV dahil fiyatı : ",(fiyat[1]*kdv[1]/100+fiyat[1],"TL"));
+break;
+
+case "mutfak erzakları":
+document.write("seçilen ürün türü : ",urun);
+document.write("<br/> Ürün fiyatı : ",fiyat[2],"TL<br/>");
+document.write("KDV dahil fiyatı : ",(fiyat[2]*kdv[2]/100+fiyat[2],"TL"));
+break;
+default:
+document.write("<font style=color:red;>girilen ürün tanımlı değil</font>");
+break;
+}
+</script>
+<br/>
+<br/>
+<br/>
+<h1>SINAV NOTU UYGULAMASI<h1>
+<script type="text/javascript">
+var sinav_1=prompt("1. sınav notu","notu giriniz");
+var sinav_2=prompt("2. sınav notu","notu giriniz");
+var d1=parseInt(sinav_1);
+var d2=parseInt(sinav_2);
+var ort=((d1+d2)/2);
+
+switch (true)
+{
+case(ort<=30):
+alert("ortalamanız : "+ort+"kaldınız");
+break;
+
+case(ort>=31 && ort<=69):
+alert("ortalamanız : " +ort+"sorumlu geçtiniz");
+break;
+
+default:
+alert("ortalamanız : " +ort+"geçtiniz");
+break;
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>

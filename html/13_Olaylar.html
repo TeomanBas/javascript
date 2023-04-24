@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+function kontrol(){
+return confirm("formu göndermek istediğinizden emin misiniz?");
+}
+function temizle(){
+return confirm("formu temizlemek istediğinizden emin misiniz?");
+}
+
+function kontrol_et(){
+mail_adres_et=document.getElementById("mail_input").value.indexOf("@");
+mail_adres_domain=document.getElementById("mail_input").value.indexOf(".com");
+if(mail_adres_et!==-1 && mail_adres_domain!==-1 ){
+document.getElementById("kontrol_mesaj").innerHTML="OKEY :)";
+}else{
+document.getElementById("kontrol_mesaj").innerHTML="Geçersiz Mail adresi";
+}
+}
+
+function yaz(){
+document.getElementById("mail_input").innerHTML="abcd@examples.com";
+}
+
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+<h1>OLAYLAR</h1>
+<p>kullanıcının sayfa üzerinde yaptığı her türlü işlem bir olayı ifade eder sayfaları açmak nesneye tıklamak nesne üzerinde 
+fare ile gelmek farenin nesne üzerinden ayrılması bir değeri değiştirmek bunların her biri ayrı bir olaydır ve bu olaylara bağlı işlemler yaptırılabilir 
+bu olaylar html nesneler ile birlikte kullanılır alma olaya bağlı yaptırılmak istenilen işlem javascript ile gerçekleştirilmeklidir.
+</p>
+<h2>"onClick" OLAYI</h2>
+<p>onClick bir nesnenin üzerine tıklandığında meydana gelen olaydır.Bu sadece buton için geçerli değildir.Sayfa üzerindeki tüm nesneler için uygulanabilir.
+</p>
+<h3>UYGULAMA 1</h3>
+<p>sayfaya yerleştirilen butona tıklandığında uyarı verdirelim</p>
+<form name="uygulama_1">
+<input type="button" value="mesajı göster" onClick="alert('uygulama 1 başarılı')">
+</form>
+<h2>"onMouseOver","onMouseOut" olayı</h2>
+<p>fare ile ilgili olaylardır.onMouseOver fare nesnenin üzerinde geldiğinde, onMouseOut ise nesnenin üzerinden ayrıldığında gerçekleşen olaydır.</p>
+<h3>UYGULAMA 2</h3>
+<p>sayfamıza yerleştirdiğimiz yazının üzerine fare geldiğinde zemin rengi kırmızı ,ayrıldığında is zemin rengini renksiz yapalım</p>
+<table>
+<tr>
+<td onMouseOver="this.bgColor='red'" onMouseOut="this.bgColor=''">UYGULAMA 2</td>
+</tr>
+</table>
+
+<h2>"onSubmit" ve "onReset" OLAYI</h2>
+<p>form sunucuya gönderilmek istendiğinde meydana gelen olaydır.Form içerisindeki bilgiler doldurulduktan sonra form sunucuya gönderilmeden önce içeriğini kontrol etmek için "onSubmit" olayı kullanılır</p>
+<p>web sayfasında bulunan form elemenalarının içeriği temizlenmek istediğinde aktif olan olaydır</p>
+<h3>UYGULAMA 3</h3>
+<p>formu sunucuya göndermeden önce kullanıcıya sorup , kullanıcı izin verirse gönderilmesini sağlayalım.ve temizlemek isterse yine aynı şekilde seçim isteyin</p>
+<form name="deneme" onsubmit="return kontrol()" onReset="return temizle()" action="deneme.php">
+<table border="1px">
+<tr><td>Ad:</td><td><input type="text" name="ad"></td></tr>
+<tr><td>Soyad:</td><td><input type="text" name="soyad"></td></tr>
+<tr><td colspan="2"><input type="submit" name="gonder" value="gönder" ><input type="reset" value="temizle"></td></tr>
+</table>
+</form>
+
+<h2>"onFocus", "onChange", "onBlur" OLAYLARI</h2>
+<p>bu olaylar çoğunlukla kullanıcıdan doldurulması istenilen bir formun doğrulanmasında kullanılır.<b>onFocus</b>,bir nesneye konumlannıldığında meydana gelir.
+örneğin imlecimiz sayfada bulunan text nesnesine geçtiğinde onFocus olayı meydana gelir.
+<b>onChange</b>,nesne içerisinde bir değişiklik yapılırsa meydana gelir.
+<b>onBlur</b>, bir nesne içerisinde çıkıldığında yani focus olayı sonaerdiğinde meydana gelir.</p>
+<h3>UYGULAMA 4</h3>
+<p>sayfamızda mail adresi girişi için bulunan text nesnesinin içerisine girildiğinde 
+alt tarafında giriş türü hakkında bilgi verelim ve bilgi girişi yapılıp
+ text nesnesinden ayrılırken girilen bilginin @ işareti içerip içermediğni kontrol edelim</p>
+ <b>YAPILACAKLAR</b>
+ <ol>
+	<li>document.getElementById : sayfa içerisinde bulunan nesnelere ulaşmak için kullanılır.</li>
+	<li>indexOf fonksiyonu için karakter fonksiyonları konusunu inceleyiniz</li>
+	<li>aşağıdaki kodları yazarak sonucu inceleyiniz</li>
+	<li>kodlarımız mail adresini sadece @ işaretine göre kontrol etmektedir.Aynı zamanda nokta olup olmadığınıda kontrol edecek şekilde düzenleyiniz.</li>
+ </ol>
+ 
+ 
+<form><table border="1px">
+<tr><td><input id="mail_input" onFocus="yaz()" onBlur="kontrol_et()"></td></tr>
+<tr><span id="kontrol_mesaj" style="color:red;"></span></tr>
+</table></form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

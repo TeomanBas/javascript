@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript" >
+
+function form_denetle(ad,soyad,mail,tel){
+	if(ad==""){
+		alert("lütfen tüm alanları doldurunuz:adi");
+	}else if(soyad=="")
+	{
+	alert("lütfen tüm alanları doldurunuz:soyadi");
+	}else if(mail=="")
+	{
+	alert("lütfen tüm alanları doldurunuz:mail");
+	}else if(tel=="")
+	{
+	alert("lütfen tüm alanları doldurunuz:tel");
+	}
+	else{
+	alert("form gönderildi");
+	
+	}
+}
+
+</script>
+</head>
+<body>
+<form name="form">
+
+AD      :<input type="text" name="adi"><br/>
+SOYAD   :<input type="text" name="soyadi"><br/>
+E-POSTA :<input type="mail" name="eposta"><br/>
+TELEFON :<input type="tel" name="tel"><br/>
+<input type="button" name="gonder" value="gonder" onClick="form_denetle(document.form.adi.value,document.form.soyadi.value,document.form.eposta.value,document.form.tel.value)">
+</form>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+//uygulama3
+var tanimli_no="1234567890";
+
+</script>
+</head>
+<body>
+<h1>PROMPT (KULLANICIDAN BİLGİ ALMA)</h1>
+<p>kullanıcıdan iki şekilde veri alınabilir birincisi form yöntemi ikincisi javascript kullanarak promt fonksiyonu ile bilgi almak
+form yönteminde sayfa submit edilir.promt fonksiyonunda ise buna gerek yoktur.Kullanıcı bilgi girdikten sonra tamam seçeneğine tıklandığında 
+girilen bilgi döner iptal seçeneğine tıkladığında null değer döner.<br/>
+<b>kullanım şekli:</b><br/>
+promt("sorulan soru","dönen cevap");
+
+birinci parametre sourlan soruyu tanımlar ikinci parametre zorunlu değildir örnek bir cevap görüntülenmek istenirse örnek bir cevap yazılabilir.
+dönen değer bir değişkene atanmak istenirse <br/>
+
+değişken_adı=promt("sorulan soru","cevap örneği");<br/>
+şekkinde bir kullanım olabilir.<br/>
+dönen değer ile matematiksel işlem yapılmak istenirse parseInt fonksiyonu ile bu değeri sayısal değere çevirebiliriz. 
+
+</p>
+<h2>UYGULAMA 1</h2>
+
+<script>
+var telno=prompt("telefon numaranızı giriniz:","0(5xx) xxx xx xx");
+document.write("telefon no:"+telno);
+</script>
+<br/>
+kullanıcıdan telefon no alarak bunu sayfaya yazdırır.
+
+<h1>ALERT (UYARI MESAJI )</h1>
+<p>
+alert nesnesi kullanıcıya herhangi bir zamanda uyarı vermek amacıyla kullanılmaktadır.Parametre olarak tırnak içerisinde uyarı mesajı yazılması yeterlidir.
+<b>kullanım şekli:</b>
+alert("uyarı mesajınız!");
+
+
+
+</p>
+<h2>UYGULAMA 2</h2>
+
+<script type="text/javascript" >
+var mesaj=prompt("mesajınızı giriniz");
+alert(mesaj);
+</script>
+sayfa açıldığında kullanıcının girmiş olduğu değeri kullanıcıya alert olarak verir.
+<h1>CONFİRM(ONAY PENCERESİ)</h1>
+<p>confirmm kullanının bir seçim yapması veya yapılan işlemi doğrulaması için kullanılan mesaj kutularıdır.bu konutla alrt birbirine karştırılmamalıdır.alert fonnksiyonu mesaj veriri ve tek seçenek vardır.açılan pencerede "tamam " ve "iptal" seçenekleri vardır.kullanıcı "tamam seçeneğine tıklarsa true , iptal seçeneğine tıklarsa false değeri döndürür.
+<b>kullanım şekli:</b>
+<pre>
+confirm("mesajınız");
+</pre>
+
+
+</p>
+
+<h2>UYGULAMA 3</h2>
+<p> sayfa açıldığında tanımlanan değişkendeki bilginin kullanıcıya ait olup olmadığını sorduktan sonra bilgi kullanıcıya aitse sayfaya yazdıralım bilgi kullanıcıya ait değilse sayfaya uyarı mesajı yazdıralım.</p>
+<script>
+
+var dogruluk=confirm(tanimli_no +"numarası size mi ait?");
+var sonuc=dogruluk ? "numaranız "+ tanimli_no:" mevcut numara size ait değil";
+document.write(sonuc);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

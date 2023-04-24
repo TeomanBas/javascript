@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script>
+var tarih=new Date();
+var saat=tarih.getHours();
+if(saat<10){
+document.write("günaydın");
+}
+else if(saat>=10 && saat<=17){
+document.write("iyi günler");
+
+}
+else{
+document.write("iyi akşamlar");
+}
+
+var sinav_1=prompt("1.sınav","");
+var sinav_2=prompt("2.sınav","");
+var ortalama=((parseInt(sinav_1)+parseInt(sinav_2))/2);
+
+if(ortalama<=55){
+var sonuc="kaldı";
+}
+else{
+var sonuc="geçti";
+}
+alert("ortalama : "+ortalama+"\n"+sonuc);
+</script>
+</head>
+<body>
+</body>
+</html>

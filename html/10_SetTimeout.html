@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script type="text/javascript">
+var i=0;
+function sayac(){
+//window.status özelliği tüm tarayıcılardan kaldırılmış yıl 2021 
+//window.status=(i++)+"saniye boyunca işlem yapmadınız";
+alert("merhaba dünya");
+setTimeout("sayac()",5000);
+}
+</script>
+</head>
+<body>
+<h1>setTimeout Fonksiyonu</h1>
+<p>bir fonksiyonun veya kodun belirli bir süre sonra veya belirli aralıklarla çalışması isteniyorsa setTimeout fonksiyonu kullanılır.Javascript içerisinde fonksiyonlar kullanırken yazım şekline dikkat edilmelidir.Bir fonksiyonu belirli bir süre sonra bir kez çalıştırmak için setTimeout fonksiyonu çalıştırılacak fonksiyyonun kod bloğunun dışında olmalıdır.belirli süre aralıklarla tekrar ettirmek için setTimeout fonksiyonu çalıştırılavak fonksiyonun kod bloğunun içerisinde olmalıdır.</p>
+<b>kullanım şekli : </b>
+<pre>setTimeout("çalıştırılacak fonksiyon",milisaniye cinsinden bekleme süresi);</pre>
+<b>NOT : çalıştırılacak fonksiyonun kesinlikle tırnak içine yazılması gerekir.</b>
+<h2>UYGULAMA 1</h2>
+<p>web tarayıcımızın durum çubuğunda ziyaretçinin sitede hiçbir işlem yapmadan kaç saniye kaldığını gösterelim.durum çubuğuna mesaj yazdırmak için window.status özelliği kullanılır.</p>
+<pre>
+//bu kısım head kısmına yazılır
+< script type="text/javascript">
+var i=0;
+function sayac(){
+windows.status=(i++)+"saniye boyunca işlem yapmadınız";
+setTimeout("sayac()",1000);
+}
+< /script >
+</pre>
+<script type="text/javascript">
+sayac();
+</script>
+
+</body>
+</html>
