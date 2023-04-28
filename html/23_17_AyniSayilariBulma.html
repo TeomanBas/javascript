@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+</head>
+<body>
+<script type="text/javascript">
+sayac=1;
+var parametreler= new Array();
+parametreler[0]=prompt("bir sayi giriniz");
+parametreler[1]=prompt("bir sayi giriniz");
+parametreler[2]=prompt("bir sayi giriniz");
+parametreler[3]=prompt("bir sayi giriniz");
+parametreler[4]=prompt("bir sayi giriniz");
+parametreler[5]=prompt("bir sayi giriniz");
+parametreler[6]=prompt("bir sayi giriniz");
+parametreler[7]=prompt("bir sayi giriniz");
+parametreler[8]=prompt("bir sayi giriniz");
+parametreler[9]=prompt("bir sayi giriniz");
+parametreler[10]=prompt("bir sayi giriniz");
+
+
+
+// bu kısım sorunlu olabilir mantık hatası var muhtemelen araştırılması gerek tarayıcı işlemi tamamlayamıyor
+
+for (x=0;x<=parametreler.length;x++){
+	for(y=sayac;y<=parametreler.length;y++){
+		if(parametreler[x]==parametreler[y]){
+			document.write(parametreler[y]+" elemanının aynısından mevcut <br>");
+            continue;
+        }	
+	}
+    sayac+=1;
+}
+
+
+</script>
+</body>
+</html>
