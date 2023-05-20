@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJE OLAY YÖNETİCİLERİ</title>
+    <script>
+        function hashhakkimda(){
+            location.hash="hakkimda";
+
+        }
+        function hashiletisim(){
+            location.hash="iletisim";
+            
+        }
+        function hashdegistir(){
+            var hashdegeri=location.hash;
+            document.getElementById("hash").innerHTML="yeni hash değeri :"+hashdegeri;
+        }
+    </script>
+</head>
+<body onhashchange="hashdegistir()" onresize="alert('sayfa ölçüsü değişti')" onscroll="alet('sayfa kaydırılıyor')">
+    <script>
+        window.onbeforeunload=function(e){
+            return "sayfadan ayrılmak istediğinize emin misiniz?";
+            
+        }
+        
+        function videoyuklemehatasi(){
+            //document.getElementById("ekran").innerHTML="video yüklenemedi";
+            document.getElementById("res").innerHTML="video yüklenemedi";
+            return "video yüklenemedi";
+        }
+        function resimyuklemehatasi(){
+            document.getElementById("ekran").innerHTML="resim yüklenemedi";   
+        }
+
+        
+        
+
+
+    </script>
+    <ul>
+        <li><b>onabort :</b>bir elemente ait kaynak dosyanın yüklenmesi iptal olduğunda</li>
+        <li><b>onbeforeunload :</b>kaldırılmadan veya sayfadan ayrılmadan önceki olay</li>
+        <li><b>onerror :</b>bir kaynağın yüklenmesinden hata olduğunda</li>
+        <li><b>onhashchange :</b>bir url'de # değeri değiştiğinde</li>
+        <li><b>onload :</b>yüklendiğinde</li>
+        <li><b>onresize :</b>yeniden boyutlandırıldığında</li>
+        <li><b>onscroll :</b>bir elemanın kaydırma çubuğu kullanıldığında</li>
+        <li><b>onunload :</b>kaldırıldığında</li>
+    </ul>
+    <hr>
+    
+    <video id="ekran" width="320px" height="240px"  onabort="videoyuklemehatasi()">
+    <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <hr>
+    <a href="hakkimda.html">başka sayfaya git</a>
+    <hr>
+    <img src="resim.jpg" onerror="resimyuklemehatasi()">
+    <hr>
+    <button onclick="hashhakkimda()">hakkımda sayfam</button><br>
+    <button onclick="hashiletisim()">iletişim sayfası</button><br>
+    <p id="hash"></p>
+    
+    
+</body>
+</html>

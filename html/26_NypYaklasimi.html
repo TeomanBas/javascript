@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesne yönelimli programlama yaklaşımı</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // obje oluşturmak
+        // var obje=(degisken1=değer, degisken2=değer2);
+        
+        var kisi1 =new Object();
+        kisi1.isim="Ayşe",
+        kisi1.yas=33,
+        kisi1.meslek="genetik bilimci"
+        
+        mesaj="merhaba ben "+kisi1.isim+" "+" yaşım "+kisi1.yas+" "+" mesleğim "+kisi1.meslek;
+        document.write(mesaj);
+        document.write("<br>");
+
+        // yeni bir obje yapılandırmak
+        function KISI(isim,yas,meslek){
+            this.isim=isim;
+            this.yas=yas;
+            this.meslek=meslek;
+
+        }
+        var kisi2 =new KISI("ali",22,"matematikçi");
+        
+        mesaj="merhaba ben "+kisi2.isim+" "+" yaşım "+kisi2.yas+" "+" mesleğim "+kisi2.meslek;
+        document.write(mesaj);
+        document.write("<br>");
+
+        // object veri ti ile sınıf , ozellik ve metot kavramını ilişkilendirmek.
+        
+        var kisi={
+            isim:"",
+            yas:null,
+            meslek:"",
+            kendiniTanit:function(){
+                mesaj="merhaba ben "+this.isim+" "+" yaşım "+this.yas+" "+" mesleğim "+this.meslek;
+                document.write(mesaj);
+            },
+            karsilikVer:function(digerkisi){
+                mesaj="bende "+digerkisi+" memnun oldum";
+                document.write(mesaj);
+            }
+        };
+        kisi.isim=" yeşim ";
+        kisi.yas=20;
+        kisi.meslek=" fizikçi ";
+        kisi.kendiniTanit();
+        kisi.karsilikVer(" müge ");
+
+        // class tanımlamak
+        class HESAP{
+            isim="";
+            soyisim="";
+            gelir;
+            borc;
+            vadesizbakiye;
+
+            
+            //metot tanımlamak
+            MustEkle(is,sis,gl,br,cbk){
+                
+                this.isim=is;
+                this.soyisim=sis;
+                this.gelir=gl;
+                this.borc=br;
+                this.vadesizbakiye=cbk;
+                document.write("hesap sınıfının mustEkle MustEkle metodu  ile"+this.isim+" kişisi eklendi");
+            };
+
+            BilgiGetir(musteri){
+                if (musteri=="meral"){
+                    document.write(must2.isim);
+                }else{
+                    document.write("Müşteri tanımlanamadı");
+                }
+                
+            };
+            
+
+
+        }
+        // class için obje tanımlama
+        var must1=new HESAP;
+        must1.isim="ali";
+        must1.soyisim="demir";
+        must1.gelir=1200;
+        must1.borc=500;
+        must1.vadesizbakiye=10000;
+
+        document.write(must1.isim);
+
+        document.write("<br>");
+        var must2=new HESAP;
+        must2.MustEkle("meral","kiraz",1000,200,5000);
+        
+        
+    </script>
+    
+</body>
+</html>

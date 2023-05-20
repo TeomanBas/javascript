@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dizler</title>
+</head>
+<body>
+    <h1>dizi tanımlama</h1>
+    <script>
+        // diziye eleman ekleme
+        var isimler=['elma','armut',2,'deniz','sandalye'];
+        document.write(isimler+"<br>");
+        document.write("diziye eleman ekleniyor");
+        isimler.push("evler");
+        document.write("<br>",isimler+"<br>");
+        document.write("<br>");
+        // dizinin elemanının değerini silmek
+        document.write("dizideki ilk elemanın değerini siliyoruz.burada değer silinir ancak isimler[0] elemanı hala var olur");
+        delete isimler[0];
+        document.write("<br>",isimler+"<br>");
+        document.write("<br>");
+        // dizinin belirli aralıklardaki elemanının değerini değiştirmek
+        document.write("dizin belirli aralıklardaki elemanların sonraki belirli sayıdaki elemeanlarına  yeni değerler eklenebilir.");
+        isimler.splice(0,3,"x","y","z");
+        document.write("<br>",isimler+"<br>");
+        document.write("<br>");
+        // dizinin uzunluğu
+        document.write("diznin uzunluğu length metodu ile alınır<br>",
+        "dizinin uzunluğu : ",isimler.length,"<br>");
+        document.write("dizinin ilk ve son elemanları yazdırmak length metodu ile yapılabilir <br>",
+        "diznin son elemeanı : ",isimler[isimler.length-1]);
+        document.write("<br>");
+        document.write("<br>");
+
+        // dizinin içerisinden eleman çıkartmak
+        document.write("dizinin son elemanını silmek shift(), ilk elemanı silmek pop() metodu ile yapılabilir<br>",
+        "dizinin tamamı : ",isimler);
+        document.write("<br>dizinin son elemanı siliniyor ",isimler.shift());
+        document.write(" silindi -> ",isimler);
+        document.write("<br>dizinin ilk elemanı siliniyor ",isimler.pop()," silindi -> ",isimler);
+        document.write("sırası bilinen dizi elemanlarının yerini değiştirelim örneğin :",isimler,"2 inci yi değiştirelim isimler[1]=yeni_deger <br>");
+        isimler[1]="yeni değer";
+        document.write("dizinin içeriği görüldüğü gibi değer değiştirildi. ",isimler,"<br>");
+        document.write("<br>");
+        // dizinin elemanlarını ters çevirmek
+        document.write("dizinin elemanları reverse() fonksiyonu ters çevirlebilir ancak bu diziyi değiştirmez gösterimi değiştirir");
+        var sayilar=[1,2,3,11,22,4,5,12,45,77];
+        document.write("sayilar dizisi : ",sayilar);
+        document.write("<br>");
+        document.write("elemanların tersten gösterimi ",sayilar.reverse());
+        document.write("<br>");
+        document.write("<br>");
+        
+        //dizinin en büyük ve en küçük değerli elemeanını bulmak
+        document.write("dizinin en büyük ve en küçük elemanları sort ile sıralandıktan sonra length ile bulunabilir");
+        document.write(sayilar);
+        document.write("elemanların sıralanış şekli : ");
+        document.write(sayilar.sort());
+        document.write("<br>");
+        var siralisayilar=sayilar.sort();
+        document.write("elemanların en büyüğü yani en son elemean : ",siralisayilar[sayilar.length-1]);
+        document.write("<br>");
+        document.write("elemanların en küçüğü yani ilk elemean : ",siralisayilar[0]);
+        document.write("elemanların en büyüğü yani en son elemean : ",siralisayilar[sayilar.length-1]);
+        document.write("<br>");
+        document.write("<br>");
+        
+        // iki dizinin birleştirilmesi
+        document.write("iki dizi birleştirilmek istenirse concat fonksiyonu kullanılabilir.");
+        document.write("<br>");
+        var sayi_isim=isimler.concat(sayilar);
+        document.write("sayılar ve isimler ",sayi_isim);
+        document.write("<br>");
+        document.write("<br>");
+
+
+        // dizi içerisinde istenilen değer  indexOf metodu ile aranabilir eğer bulunursa o değere ait olan
+        // elemanın indis numarasını döndürür.
+        document.write("deniz değerini taşıyan indis numarası : ",isimler.indexOf("deniz"));
+
+
+
+
+        
+    </script>
+</body>
+</html>

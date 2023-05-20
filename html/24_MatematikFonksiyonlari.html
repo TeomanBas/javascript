@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemaitk İşlemleri</title>
+</head>
+<body>
+    <h1>Rasgele sayı üretmek</h1>
+    <script>
+        var rasgele=Math.random();
+        document.write(rasgele)
+    </script>
+    <hr>
+    <h1>mutlak değer</h1>
+    <script>
+        var mutlak=Math.abs(-200);
+        document.write(mutlak)
+    </script>
+    <hr>
+    <h1>büyük ve küçük sayı bul</h1>
+    <script>
+        var a=22;
+        var b=212;
+        var c=12;
+        var d=25;
+        var e=2;
+        var f=110;
+        var g=10;
+
+        var buyuk=Math.max(a,b,c,d,e,f,g,);
+        var kucuk=Math.min(a,b,c,d,e,f,g,);
+
+        document.write("büyük sayı : ",buyuk," ","küçük sayı :",kucuk);
+    </script>
+    <hr>
+    <h1>ondalıklı sayı yuvalama</h1>
+    <script>
+        var ondalik=5.7;
+        document.write(" sayı :")
+        document.write(ondalik);
+        document.writeln(" <br>");
+        document.write("en yakın tam sayı ");
+        document.write(Math.round(ondalik));
+        document.writeln(" <br>");
+        document.write("en yakın alt tam sayı ");
+        document.write(Math.ceil(ondalik));
+        document.write(" <br>");
+        document.write("en yakın ust tam sayı ");
+        document.write(Math.floor(ondalik));
+    </script>
+    <h1>üs ve kök almak</h1>
+    <script>
+        document.write("üs almak sayı : ");
+        document.write(a);
+        document.write("<br>");
+        document.write("sayının 5 üssü :",Math.pow(a,5));
+        document.write("<br>");
+        document.write("sayının kökü :",Math.sqrt(a));
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olay yöneticileri</title>
+</head>
+<body>
+    <script>
+        window.onload=yapilandir;
+        function yapilandir(){
+            document.getElementById("buton1").onmouseover=function(){
+                alert("butona 1 tıklayacak mısın");
+            }
+            document.getElementById("buton2").addEventListener("click",btntik2());
+            document.getElementById("buton3").onmousedown=function(){
+                alert("mousenin sol tuşu basıldı");
+            }
+            document.getElementById("buton5").ondblclick=function(){
+                alert("buton 5 çift tıklandı");
+            }
+            document.getElementById("buton6").onmousedown=function(){
+                alert("buton 6 ya sol mouse tuşu ile basıldı");
+            }
+            document.getElementById("buton7").onmouseenter=function(){
+                alert("mouse buton 7 nin üzerinde");
+            }
+            document.getElementById("buton8").onmouseleave=function(){
+                alert("mouse butonun üzerinden ayrıldı");
+            }
+            document.getElementById("buton9").onmousemove=function(){
+                alert("mouse buton üzerinde hareket etti");
+            }
+            
+            
+            
+            
+            
+        }
+        function klvbirak(){
+            alert("basılmış olanbir tuş bırakıldı")
+
+        }
+        function klvbas(){
+            alert("bir tuşa basıldı")
+
+        }
+        function klvbasbirak(){
+            alert("bir tuşa basılıp bırakıldı")
+
+        }
+        function tiklama(){
+            alert("butona tıkladınız.");
+        }
+        function btntik2(){
+            alert("butona 2 tıkladınız.");
+        }
+        //document.addEventListener("mouseout",ayrildi);
+        function ayrildi(){
+            alert("mouse sayfadan ayrildi")
+        }
+        function ocntxmenu(){
+            alert("oncontextmenu sağ tıklamalarda mouse nin yanın açılan menüler için kullanılabilir")
+        }
+        function cifttikla(){
+            alert("asdf");
+        }
+    </script>
+    <input type="button" value="tıklayınız" onclick="tiklama()">
+    <hr>
+    <button type="button" id="buton1"> butona 1 tıkla</button>
+    <hr>
+    <button type="button" id="buton2"> butona 2 tıkla</button>
+    <hr>
+    <button type="button" id="buton3" > butona 3 tıkla</button>
+    <hr>
+    <button type="button" id="buton4" oncontextmenu="ocntxmenu()"> oncontextmenu</button>
+    <hr>
+    <button type="button" id="buton5" onmouseenter="cifttikla"> çift tıkla</button>
+    <hr>
+    <button type="button" id="buton6" > butona 6 tıkla</button>
+    <hr>
+    <button type="button" id="buton7" > butona 7 tıkla</button>
+    <hr>
+    <button type="button" id="buton8" > butona 8 tıkla</button>
+    <hr>
+    <button type="button" id="buton9" > butona 9 tıkla</button>
+    <hr>
+    <textarea  id="metinkutusu" cols="30" rows="10" onkeydown="klvbasbirak()" onkeyup="klvbirak()" onkeypress="klvbas()"></textarea>
+    
+</body>
+</html>

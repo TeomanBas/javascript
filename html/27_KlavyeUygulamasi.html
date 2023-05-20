@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klavye uygulamasi</title>
+</head>
+<body>
+    <script>
+        window.onload=yapilandir;
+        function yapilandir(){
+            metinkutusu.addEventListener("keydown",tusabasildi);
+            window.addEventListener("onkeyup",temizle);
+        }
+        
+        function tusabasildi(){
+            var rasb=Math.round(Math.random()*50+10);
+            var renk=["red","green","blue"];
+            var rasr=renk[Math.round(Math.random()*3)-1];
+            document.getElementById('harfler').innerHTML+='<font style="font-size:'+rasb+'px;'+'color:'+rasr+';">'+document.getElementById("metinkutusu").value+'</font>';
+            document.getElementById('metinkutusu').value="";
+        }
+        function temizle(){
+            if(e.keyCode==32){
+                e.preventDefault();
+                document.getElementById("harfler").innerHTML="";
+            }
+        }
+        
+    </script>
+    <input type="text" id="metinkutusu" style="width:150px;" >
+    <div id="harfler" ></div>
+</body>
+</html>
