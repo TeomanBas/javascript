@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="zaman"></div>
+<script>
+// burada tarayıcının sse(server side events) destekleyip desteklemediği kontrol ediliyor
+// eventsource ile nesne türünün olup olmadığına bakıyoruz eğer yoksa undefined dönecektir.
+if(typeof(EventSource) !== "undefined") {
+	//etkinlik için bir EventSource nesnesi oluşturuyoruz ve bu nesnenin kaynağını yani bu nesneyi oluşturan dosyayı seçiyoruz.
+    var kaynak = new EventSource("../php/31_ServerSideEvent-script.php");
+	// onmessage özelliği ile  fonksiyon tetikleyip etkinlik tanımlıyoruz.bu fonksiyon içerisinde event etkinliğinin içinden dönen onpostmessage 
+	// dan dönen değeri alıyoruz. ve zaman id li html etiketinin içeriği olarak atama yapıyoruz.
+    kaynak.onmessage = function(event) {
+        document.getElementById("zaman").innerHTML += event.data + "<br>";
+    };
+} else {
+    document.getElementById("zaman").innerHTML = "Tarayıcı SSE Desteklemiyor";
+}
+</script>
+
+</body>
+</html>

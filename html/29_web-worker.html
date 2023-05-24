@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web worker</title>
+</head>
+<body>
+    <script>
+        var worker=new Worker('../js/CarpanlaraAyir.js');
+        function CarpanlaraAyir(){
+            worker.postMessage(document.getElementById("Sayi").value);
+        }
+        worker.onmessage=function(event){
+            document.getElementById("Sonuc").innerHTML=document.getElementById('Sayi').value+"sayısına kadar asal sayılar : "+
+            event.data +" dır";
+            worker.close();
+        };
+    </script>
+    
+    <input type="text" id="Sayi">
+    <button onclick="CarpanlaraAyir()">sayıyı çarpanalara ayır</button>
+    <p id="Sonuc"></p>
+</body>
+</html>

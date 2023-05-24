@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/30_LocalStorageApi-script.js"></script>
+    <style rel="stylesheet" href="../css/30_style.css"></style>
+    <title>LOCAL STORAGE API</title>
+</head>
+<body onload="listele()">
+    <p>kayıt giriniz</p>
+    isim: <input type="text" id="isim">
+    değer: <input type="text" id="deger">
+    <input type="button" value="sil" onclick="kayitsil()">
+    <input type="button" value="kaydet" onclick="kayitekle()">
+    <div id="kayitlar">
+        <p>kayit listesi</p>
+        <table id="liste" border="1px";></table><br>
+    <input type="button" value="temizle" onclick="hepsinisil()">
+    </div>    
+</body>
+</html>
