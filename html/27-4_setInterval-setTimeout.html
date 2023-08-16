@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval ve setTimeout</title>
+</head>
+<body>
+    <script>
+        // setTimeout bir fonksiyon belirli bir zaman sonra çalıştırılmasını sağlar
+        setTimeout(durum,5000);
+
+        function durum(){
+            document.getElementById("zamanasimi").innerHTML="5 saniye geçtiği için çalıştı!!!!"
+        }
+        // setInterval bir fonksiyonu belirli araıklarla çalıştırır.
+        var sayac= 0;
+        setInterval(sayacartir,1000);
+        function sayacartir(){
+            document.getElementById("sayac").innerHTML=sayac;
+            sayac++
+        }
+        
+    </script>
+    <div onload="">
+        sayac : <div id="sayac"></div>
+    </div>
+    <br>
+    <div>
+        timeout fonksiyonu 5 saniye sonra çalışır: <div id="zamanasimi">henüz çalışmadı</div>
+    </div>
+</body>
+</html>

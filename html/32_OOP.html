@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        class Daire{
+            // static keyword ü ile sınıfın özelliğine dışarıdan erişilebilir nesne oluşturmaya gerek kalmaz
+            static renk; 
+            constructor(yaricap){
+                this.Yaricap=yaricap;
+            }
+            alan(){
+                return 3.14*this.Yaricap*this.Yaricap;
+            }
+            cevre(){
+                return 2*3.14*this.Yaricap;
+            }
+        }
+        var r1 = Number(prompt("yarı çapı giriniz"));
+        var ob1 = new Daire(r1);
+        document.write("alan : "+ob1.alan());
+        document.write("<br>");
+        document.write("cevre : " + ob1.cevre());
+        document.write("<br>");
+        Daire.renk="sarı";
+        document.write(Daire.renk);
+    </script>
+    <title>OOP</title>
+</head>
+<body>
+    
+    
+</body>
+</html>
